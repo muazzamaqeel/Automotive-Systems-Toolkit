@@ -1,0 +1,29 @@
+﻿<Window x:Class="Mo_Artifactory_Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mo Artifactory Tool - (Tr. Files Sync)" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource PrimaryBrush}">
+    <Grid>
+        <!-- Top Bar -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="{StaticResource SecondaryBrush}">
+            <Button Name="SyncButton" Content="Sync .tr Files" Width="150" Height="40" 
+                    Click="SyncButton_Click" Style="{StaticResource DarkButtonStyle}" />
+            <Button Name="ConnectionButton" Content="Repo. Connection Check" Width="223" Height="40" 
+                    Click="ConnectionButton_Click" Style="{StaticResource DarkButtonStyle}" />
+            <Button Name="SettingsButton" Content="Token Update" Width="150" Height="40" 
+                    Click="SettingsButton_Click" Style="{StaticResource DarkButtonStyle}" />
+        </StackPanel>
+
+        <!-- Main Content -->
+        <Grid Margin="10,60,10,10">
+            <TextBox Name="LogTextBox"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Stretch"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto"
+                     IsReadOnly="True"
+                     Style="{StaticResource DarkTextBoxStyle}" />
+        </Grid>
+    </Grid>
+</Window>

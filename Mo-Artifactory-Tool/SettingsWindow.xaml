@@ -1,0 +1,15 @@
+﻿<Window x:Class="Mo_Artifactory_Tool.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="150" Width="400"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource PrimaryBrush}">
+    <Grid Margin="0,0,0,-37">
+        <StackPanel Margin="20">
+            <TextBlock Text="Auth Token:" Foreground="{StaticResource TextBrush}" Margin="0,0,0,10"/>
+            <TextBox Name="AuthTokenTextBox" Style="{StaticResource DarkTextBoxStyle}"/>
+            <Button Content="Save" Width="100" HorizontalAlignment="Center" Margin="10"
+                    Click="SaveButton_Click" Style="{StaticResource DarkButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Window>

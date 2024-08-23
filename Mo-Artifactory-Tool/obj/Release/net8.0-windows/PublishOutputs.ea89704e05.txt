@@ -1,0 +1,8 @@
+C:\Programming\Publish Softwares\Mo-Artifactory-Tool.exe
+C:\Programming\Publish Softwares\Mo-Artifactory-Tool.dll
+C:\Programming\Publish Softwares\Mo-Artifactory-Tool.deps.json
+C:\Programming\Publish Softwares\Mo-Artifactory-Tool.runtimeconfig.json
+C:\Programming\Publish Softwares\Mo-Artifactory-Tool.pdb
+C:\Programming\Publish Softwares\MaterialDesignColors.dll
+C:\Programming\Publish Softwares\MaterialDesignThemes.Wpf.dll
+C:\Programming\Publish Softwares\Microsoft.Xaml.Behaviors.dll
