@@ -1,0 +1,20 @@
+﻿V2X-VersionCheck
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Programming\Outside Repo\V2X-VersionCheck\obj\Release\net8.0-windows\
+V2X_VersionCheck
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+C:\Programming\Outside Repo\V2X-VersionCheck\App.xaml
+2-528775210
+
+7-697742248
+199-836055072
+MainWindow.xaml;VersionInfoWindow.xaml;
+
+False
+

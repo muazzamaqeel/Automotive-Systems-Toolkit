@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|c:\\programming\\outside repo\\v2x-versioncheck\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|c:\\programming\\outside repo\\v2x-versioncheck\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|c:\\programming\\outside repo\\v2x-versioncheck\\versioninfowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|solutionrelative:versioninfowindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|c:\\programming\\outside repo\\v2x-versioncheck\\versioninfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2881F7FA-6BBE-4013-9C76-F7728CDAF8F7}|V2X-VersionCheck.csproj|solutionrelative:versioninfowindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VersionInfoWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\VersionInfoWindow.xaml.cs",
+              "RelativeDocumentMoniker": "VersionInfoWindow.xaml.cs",
+              "ToolTip": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\VersionInfoWindow.xaml.cs",
+              "RelativeToolTip": "VersionInfoWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T10:53:38.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VersionInfoWindow.xaml",
+              "DocumentMoniker": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\VersionInfoWindow.xaml",
+              "RelativeDocumentMoniker": "VersionInfoWindow.xaml",
+              "ToolTip": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\VersionInfoWindow.xaml",
+              "RelativeToolTip": "VersionInfoWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-29T10:53:29.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-29T09:27:12.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Programming\\Outside Repo\\V2X-VersionCheck\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAOsAAAAAAAAAAAAAwAoBAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T09:27:12.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

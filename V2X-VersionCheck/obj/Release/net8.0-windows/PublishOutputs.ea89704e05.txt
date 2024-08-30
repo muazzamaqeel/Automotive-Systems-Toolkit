@@ -1,0 +1,13 @@
+C:\Programming\Publish Softwares\V2X-VersionCheck.exe
+C:\Programming\Publish Softwares\V2X-VersionCheck.dll
+C:\Programming\Publish Softwares\V2X-VersionCheck.deps.json
+C:\Programming\Publish Softwares\V2X-VersionCheck.runtimeconfig.json
+C:\Programming\Publish Softwares\V2X-VersionCheck.pdb
+C:\Programming\Publish Softwares\System.IO.Ports.dll
+C:\Programming\Publish Softwares\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Programming\Publish Softwares\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Programming\Publish Softwares\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Programming\Publish Softwares\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Programming\Publish Softwares\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Programming\Publish Softwares\runtimes\unix\lib\net8.0\System.IO.Ports.dll
+C:\Programming\Publish Softwares\runtimes\win\lib\net8.0\System.IO.Ports.dll
