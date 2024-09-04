@@ -55,6 +55,7 @@ namespace MO_TERMINAL
             _toggleSwitchHandler?.ToggleSwitch_Unchecked(sender, e);
         }
 
+
         private void MainWindow_StateChanged(object sender, EventArgs e)
         {
             if (_toggleSwitchHandler != null)
@@ -65,13 +66,19 @@ namespace MO_TERMINAL
 
         private void LoadCOMPorts()
         {
+            // Clear the existing list first
             COMPortList.Items.Clear();
+
+            // Get available COM ports
             string[] ports = serialPortManager.GetAvailablePorts();
+
+            // Add each port to the ListBox (COMPortList)
             foreach (string port in ports)
             {
                 COMPortList.Items.Add(port);
             }
         }
+
 
         private void StartAutoDetection()
         {
@@ -113,6 +120,7 @@ namespace MO_TERMINAL
             ScrollViewer? frameScrollViewer = null;
             TabItem? frameTabItem = null;
 
+            // Match the frame index to the appropriate frame
             switch (frameIndex)
             {
                 case 0:
@@ -139,15 +147,18 @@ namespace MO_TERMINAL
 
             if (frameDataTextBox != null)
             {
+                // Append data to the appropriate frame's TextBox
                 frameDataTextBox.AppendText(data);
                 ScrollToBottom(frameScrollViewer!);
 
+                // Update the TabItem header with the data type and port name
                 if (!string.IsNullOrEmpty(dataType) && frameTabItem != null)
                 {
                     frameTabItem.Header = $"{dataType} - {portName}";
                 }
             }
         }
+
 
         private void ScrollToBottom(ScrollViewer scrollViewer)
         {
@@ -161,19 +172,25 @@ namespace MO_TERMINAL
 
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
+            // Ensure you have selected the COM port and frame
             if (COMPortList.SelectedItem != null && FrameSelector.SelectedIndex != -1 && BaudRateSelector.SelectedItem != null)
             {
                 string? selectedPort = COMPortList.SelectedItem?.ToString();
+
+                // Correct way to get selected baud rate from BaudRateSelector ComboBox
                 if (!string.IsNullOrEmpty(selectedPort) && int.TryParse((BaudRateSelector.SelectedItem as ComboBoxItem)?.Content?.ToString(), out int baudRate))
                 {
                     int selectedFrame = FrameSelector.SelectedIndex;
 
+                    // Connect to the selected port and frame
                     bool connected = await serialPortManager.ConnectAsync(selectedFrame, selectedPort, baudRate);
 
                     if (connected)
                     {
+                        // Remove the selected port from the ListBox once connected
                         Dispatcher.InvokeAsync(() => COMPortList.Items.Remove(selectedPort));
 
+                        // Register a handler to listen to the incoming data
                         serialPortManager.RegisterDataReceivedHandler(selectedFrame, (s, args) =>
                         {
                             var task = Task.Run(() =>
@@ -201,6 +218,7 @@ namespace MO_TERMINAL
                 MessageBox.Show("Please select a COM port, frame, and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
@@ -297,6 +315,11 @@ namespace MO_TERMINAL
         {
             _toggleSwitchHandler?.DisposeResources();
             base.OnClosed(e);
+        }
+
+        private void Frame1Data_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

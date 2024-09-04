@@ -1,9 +1,9 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="MO_TERMINAL.MainWindow"
-        Title="Muazzam - CONMOD Project" Height="600" Width="800">
-
+        x:Class="MO_TERMINAL.MainWindow"
+        Title="Muazzam - CONMOD Project" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#333333"/>
         <SolidColorBrush x:Key="SecondaryBackgroundColor" Color="#444444"/>
@@ -12,73 +12,7 @@
         <SolidColorBrush x:Key="SecondaryTextColor" Color="#CCCCCC"/>
         <SolidColorBrush x:Key="SelectedTextColor" Color="#000000"/>
 
-        <!-- Style for ComboBoxItem -->
-        <Style TargetType="{x:Type ComboBoxItem}">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-            <Setter Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
-            <Style.Triggers>
-                <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Foreground" Value="{StaticResource SelectedTextColor}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <!-- Style for ComboBox -->
-        <Style TargetType="{x:Type ComboBox}">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-            <Setter Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="FontSize" Value="14"/>
-        </Style>
-
-        <!-- Style for Buttons -->
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-            <Setter Property="Background" Value="{StaticResource AccentColor}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="Margin" Value="5,0"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="5"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#005AAB"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#004080"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <!-- Style for TabItem -->
-        <Style TargetType="{x:Type TabItem}">
-            <Setter Property="Foreground" Value="{StaticResource PrimaryTextColor}"/>
-            <Setter Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Style.Triggers>
-                <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Foreground" Value="{StaticResource SelectedTextColor}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
+        <!-- ToggleButton Style -->
         <Style x:Key="SwitchStyle" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -111,10 +45,8 @@
             </Setter>
         </Style>
 
-
-
-
     </Window.Resources>
+
     <Grid Background="{StaticResource PrimaryBackgroundColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -125,36 +57,47 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Header -->
-        <DockPanel Background="{StaticResource AccentColor}" Grid.ColumnSpan="2">
-            <TextBlock Foreground="{StaticResource PrimaryTextColor}" FontSize="24" FontWeight="Bold" Margin="10"><Run Text="CONMOD"/><Run Language="de-de" Text=" - "/><Run Text="Tracing Tool"/><LineBreak/><Run/><Run Text=" "/><Run/><Run/></TextBlock>
+        <!-- Header Section -->
+        <DockPanel Background="{StaticResource PrimaryBackgroundColor}" Grid.ColumnSpan="2">
+            <TextBlock Foreground="{StaticResource PrimaryTextColor}" FontSize="24" FontWeight="Bold" Margin="10">
+                <Run Text="CONMOD "/>
+                <Run Text="Tracing Tool"/>
+            </TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <Button Content="Refresh" Click="RefreshButton_Click"/>
-                <Button Content="Connect" Click="ConnectButton_Click"/>
-                <Button Content="Disconnect" Click="DisconnectButton_Click"/>
+                <Button Content="Refresh" Click="RefreshButton_Click" Width="80" />
+                <Button Content="Connect" Click="ConnectButton_Click" Width="80" />
+                <Button Content="Disconnect" Click="DisconnectButton_Click" Width="80" />
             </StackPanel>
         </DockPanel>
 
-        <!-- COM Port List -->
+        <!-- COM Port and Controls Section -->
         <StackPanel Grid.Row="1" Grid.Column="0" Margin="10">
             <TextBlock Text="Select COM Port" Foreground="{StaticResource PrimaryTextColor}" Margin="0,0,0,5"/>
-            <ListBox x:Name="COMPortList" SelectionChanged="COMPortList_SelectionChanged" Foreground="{StaticResource PrimaryTextColor}" Background="{StaticResource SecondaryBackgroundColor}" BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Padding="5" FontSize="14"/>
-            <TextBlock Text="Select Frame" Foreground="{StaticResource PrimaryTextColor}" Margin="0,20,0,5"/>
+            <ListBox x:Name="COMPortList" SelectionChanged="COMPortList_SelectionChanged" 
+                     Foreground="{StaticResource PrimaryTextColor}" 
+                     Background="{StaticResource SecondaryBackgroundColor}" 
+                     BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Padding="5" FontSize="14" Height="15"/>
+
+            <TextBlock Text="Select Frame" Foreground="{StaticResource PrimaryTextColor}" Margin="10,20,0,5"/>
             <ComboBox x:Name="FrameSelector" SelectionChanged="FrameSelector_SelectionChanged">
                 <ComboBoxItem Content="Frame 1"/>
                 <ComboBoxItem Content="Frame 2"/>
                 <ComboBoxItem Content="Frame 3"/>
                 <ComboBoxItem Content="Frame 4"/>
             </ComboBox>
-            <TextBlock Text="Select Baud Rate" Foreground="{StaticResource PrimaryTextColor}" Margin="0,20,0,5"/>
+
+            <TextBlock Text="Select Baud Rate" Foreground="{StaticResource PrimaryTextColor}" Margin="10,20,0,5"/>
             <ComboBox x:Name="BaudRateSelector" SelectionChanged="BaudRateSelector_SelectionChanged">
                 <ComboBoxItem Content="9600"/>
                 <ComboBoxItem Content="115200"/>
             </ComboBox>
         </StackPanel>
 
-        <!-- Data Display and Input -->
-        <TabControl Grid.Row="1" Grid.Column="1" Margin="10" x:Name="FrameTabControl" Background="{StaticResource SecondaryBackgroundColor}" Foreground="{StaticResource PrimaryTextColor}" BorderBrush="{StaticResource AccentColor}" BorderThickness="1">
+        <!-- Data Display Section -->
+        <TabControl Grid.Row="1" Grid.Column="1" Margin="10" x:Name="FrameTabControl" 
+                    Background="{StaticResource SecondaryBackgroundColor}" 
+                    Foreground="{StaticResource PrimaryTextColor}" 
+                    BorderBrush="{StaticResource AccentColor}" BorderThickness="1">
             <!-- Frame 1 -->
             <TabItem Header="Frame 1">
                 <Grid>
@@ -163,12 +106,12 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <ScrollViewer x:Name="Frame1ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                        <TextBox x:Name="Frame1Data" IsReadOnly="True" VerticalAlignment="Top" Margin="10" 
+                        <TextBox x:Name="Frame1Data" IsReadOnly="True" 
                                  Foreground="{StaticResource PrimaryTextColor}" 
                                  Background="{StaticResource SecondaryBackgroundColor}" 
                                  BorderBrush="{StaticResource AccentColor}" BorderThickness="1"/>
                     </ScrollViewer>
-                    <TextBox x:Name="Frame1Input" VerticalAlignment="Bottom" KeyDown="Frame1Input_KeyDown" Margin="10" 
+                    <TextBox x:Name="Frame1Input" KeyDown="Frame1Input_KeyDown" Margin="10" 
                              Foreground="{StaticResource PrimaryTextColor}" 
                              Background="{StaticResource SecondaryBackgroundColor}" 
                              BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1"/>
@@ -183,12 +126,12 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <ScrollViewer x:Name="Frame2ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                        <TextBox x:Name="Frame2Data" IsReadOnly="True" VerticalAlignment="Top" Margin="10" 
+                        <TextBox x:Name="Frame2Data" IsReadOnly="True" 
                                  Foreground="{StaticResource PrimaryTextColor}" 
                                  Background="{StaticResource SecondaryBackgroundColor}" 
                                  BorderBrush="{StaticResource AccentColor}" BorderThickness="1"/>
                     </ScrollViewer>
-                    <TextBox x:Name="Frame2Input" VerticalAlignment="Bottom" KeyDown="Frame2Input_KeyDown" Margin="10" 
+                    <TextBox x:Name="Frame2Input" KeyDown="Frame2Input_KeyDown" Margin="10" 
                              Foreground="{StaticResource PrimaryTextColor}" 
                              Background="{StaticResource SecondaryBackgroundColor}" 
                              BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1"/>
@@ -203,12 +146,12 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <ScrollViewer x:Name="Frame3ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                        <TextBox x:Name="Frame3Data" IsReadOnly="True" VerticalAlignment="Top" Margin="10" 
+                        <TextBox x:Name="Frame3Data" IsReadOnly="True" 
                                  Foreground="{StaticResource PrimaryTextColor}" 
                                  Background="{StaticResource SecondaryBackgroundColor}" 
                                  BorderBrush="{StaticResource AccentColor}" BorderThickness="1"/>
                     </ScrollViewer>
-                    <TextBox x:Name="Frame3Input" VerticalAlignment="Bottom" KeyDown="Frame3Input_KeyDown" Margin="10" 
+                    <TextBox x:Name="Frame3Input" KeyDown="Frame3Input_KeyDown" Margin="10" 
                              Foreground="{StaticResource PrimaryTextColor}" 
                              Background="{StaticResource SecondaryBackgroundColor}" 
                              BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1"/>
@@ -223,12 +166,12 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <ScrollViewer x:Name="Frame4ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                        <TextBox x:Name="Frame4Data" IsReadOnly="True" VerticalAlignment="Top" Margin="10" 
+                        <TextBox x:Name="Frame4Data" IsReadOnly="True" 
                                  Foreground="{StaticResource PrimaryTextColor}" 
                                  Background="{StaticResource SecondaryBackgroundColor}" 
                                  BorderBrush="{StaticResource AccentColor}" BorderThickness="1"/>
                     </ScrollViewer>
-                    <TextBox x:Name="Frame4Input" VerticalAlignment="Bottom" KeyDown="Frame4Input_KeyDown" Margin="10" 
+                    <TextBox x:Name="Frame4Input" KeyDown="Frame4Input_KeyDown" Margin="10" 
                              Foreground="{StaticResource PrimaryTextColor}" 
                              Background="{StaticResource SecondaryBackgroundColor}" 
                              BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1"/>
@@ -236,14 +179,8 @@
             </TabItem>
         </TabControl>
 
-        <!-- Button for Python Tool at Bottom Left -->
-        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="13,0,0,10" Height="175" Width="177">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="41*"/>
-                <ColumnDefinition Width="19*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Replacing Buttons with Toggle Switch -->
+        <!-- Bottom Left Toggle Switch -->
+        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="13,0,0,10" Height="323" Width="177">
             <ToggleButton x:Name="toggleSwitch"
               Width="70"
               Background="Gray"
@@ -252,10 +189,16 @@
               Unchecked="ToggleSwitch_Unchecked"
               Style="{StaticResource SwitchStyle}"
               HorizontalAlignment="Left"
-              VerticalAlignment="Top" 
-              RenderTransformOrigin="0.871,0.164" Margin="0,135,0,0"/>
-            <TextBlock Foreground="{StaticResource PrimaryTextColor}" Margin="0,112,42,47"><Run Language="de-de" Text="Toggle Switch"/><LineBreak/><Run Language="de-de"/></TextBlock>
-
+              VerticalAlignment="Top" Margin="0,268,0,0"/>
+            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="0,303,0,0">Toggle Switch</TextBlock>
+            <Button Content="K15 ON" Click="RefreshButton_Click" Margin="104,42,0,249" />
+            <Button Content="Reset" Click="RefreshButton_Click" Margin="0,42,104,249" />
+            <Button Content="K15 Off" Click="RefreshButton_Click" Margin="104,78,0,213" />
+            <Button Content="WD ON" Click="RefreshButton_Click" Margin="104,124,0,166" />
+            <Button Content="WD OFF" Click="RefreshButton_Click" Margin="104,162,0,129" />
+            <Button Content="Password" Click="RefreshButton_Click" Margin="44,0,45,291" />
+            <Button Content="BIOS" Click="RefreshButton_Click" Margin="0,79,104,213" />
+            <Button Content="Marker" Click="RefreshButton_Click" Margin="0,125,104,166" />
         </Grid>
 
     </Grid>
