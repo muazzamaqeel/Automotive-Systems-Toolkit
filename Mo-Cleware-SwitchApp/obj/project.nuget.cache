@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l/5r6CdH+Rw=",
+  "dgSpecHash": "8Zv3wUPkOPQ=",
   "success": true,
-  "projectFilePath": "C:\\Programming\\Outside Repo\\MO_Cleware_SwitchApp\\MO_Cleware_SwitchApp.csproj",
+  "projectFilePath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MAqeel\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512",
     "C:\\Users\\MAqeel\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",

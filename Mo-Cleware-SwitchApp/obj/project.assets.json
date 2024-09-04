@@ -297,11 +297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programming\\Outside Repo\\MO_Cleware_SwitchApp\\MO_Cleware_SwitchApp.csproj",
+      "projectUniqueName": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
       "projectName": "MO_Cleware_SwitchApp",
-      "projectPath": "C:\\Programming\\Outside Repo\\MO_Cleware_SwitchApp\\MO_Cleware_SwitchApp.csproj",
+      "projectPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
       "packagesPath": "C:\\Users\\MAqeel\\.nuget\\packages\\",
-      "outputPath": "C:\\Programming\\Outside Repo\\MO_Cleware_SwitchApp\\obj\\",
+      "outputPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -372,7 +372,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
