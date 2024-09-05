@@ -25,3 +25,31 @@ C:\Programming\Outside Repo\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Arti
 C:\Programming\Outside Repo\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\App.baml
 C:\Programming\Outside Repo\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\SettingsWindow.baml
 C:\Programming\Outside Repo\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\SettingsWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Mo-Artifactory-Tool.exe
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Mo-Artifactory-Tool.deps.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Mo-Artifactory-Tool.runtimeconfig.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Mo-Artifactory-Tool.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Mo-Artifactory-Tool.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.csproj.AssemblyReference.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\SettingsWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\App.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\SettingsWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\App.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool_MarkupCompile.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.g.resources
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.AssemblyInfoInputs.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.AssemblyInfo.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.csproj.CoreCompileInputs.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.sourcelink.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artif.FC901A4C.Up2Date
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\refint\Mo-Artifactory-Tool.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\Mo-Artifactory-Tool.genruntimeconfig.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Artifactory-Tool\obj\Debug\net8.0-windows\ref\Mo-Artifactory-Tool.dll

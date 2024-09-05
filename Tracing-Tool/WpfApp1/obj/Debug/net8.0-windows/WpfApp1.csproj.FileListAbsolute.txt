@@ -119,9 +119,7 @@ C:\Users\svc_sys_vw\Desktop\Muazzam\Prototype 4\WpfApp1\obj\Debug\net8.0-windows
 C:\Users\svc_sys_vw\Desktop\Muazzam\Prototype 4\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\svc_sys_vw\Desktop\Muazzam\Prototype 4\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.csproj.AssemblyReference.cache
-C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\App.baml
-C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\App.g.cs
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.cache
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.g.resources
@@ -151,3 +149,8 @@ C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\bin\Debug\net8.0-wind
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.csproj.Up2Date
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\Dashboard.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.lref
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\Dashboard.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow.g.cs

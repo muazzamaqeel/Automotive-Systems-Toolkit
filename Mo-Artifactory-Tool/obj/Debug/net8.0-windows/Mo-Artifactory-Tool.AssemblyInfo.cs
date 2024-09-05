@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mo-Artifactory-Tool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57bfb45a26016b4a8b399cf6b6abe7057c79c077")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mo-Artifactory-Tool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mo-Artifactory-Tool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

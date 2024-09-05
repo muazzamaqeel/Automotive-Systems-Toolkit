@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\",
+  "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\programming\\outside repo\\mo-artifactory-tool\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-artifactory-tool\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5CE1AE6-1489-4953-9257-ED77A020BF8C}|Mo-Artifactory-Tool.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -33,16 +33,16 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 458,
+          "DockedWidth": 412,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\App.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\App.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-23T07:26:55.102Z",
@@ -51,28 +51,27 @@
           ]
         },
         {
-          "DockedWidth": 385,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 431,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "SettingsWindow.xaml",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\SettingsWindow.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\SettingsWindow.xaml",
               "RelativeDocumentMoniker": "SettingsWindow.xaml",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\SettingsWindow.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\SettingsWindow.xaml",
               "RelativeToolTip": "SettingsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-23T07:54:29.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:54:29.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\MainWindow.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-22T12:56:36.597Z",
@@ -82,24 +81,23 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "SettingsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\SettingsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\SettingsWindow.xaml.cs",
               "RelativeDocumentMoniker": "SettingsWindow.xaml.cs",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\SettingsWindow.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\SettingsWindow.xaml.cs",
               "RelativeToolTip": "SettingsWindow.xaml.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAkwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:54:41.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:54:41.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALsAAAAAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAkwEkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:56:36.543Z",
               "EditorCaption": ""
@@ -108,14 +106,13 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\AssemblyInfo.cs",
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T07:42:02.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T07:42:02.306Z"
             }
           ]
         }

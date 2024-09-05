@@ -7,16 +7,17 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using WpfApp1;
 using WpfApp1.Components; // Import the ToggleSwitchHandler class
+using MO_TERMINAL;
 
 namespace MO_TERMINAL
 {
-    public partial class MainWindow : Window
+    public partial class TracingWindow : Window
     {
         private SerialPortManager serialPortManager = new SerialPortManager();
         private ClewareSwitchControl switchControl;
         private ToggleSwitchHandler _toggleSwitchHandler; // Declare ToggleSwitchHandler
 
-        public MainWindow()
+        public TracingWindow()
         {
             InitializeComponent(); // Initialize the components first
 

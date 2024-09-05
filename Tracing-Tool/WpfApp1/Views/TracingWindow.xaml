@@ -1,13 +1,14 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        x:Class="MO_TERMINAL.MainWindow"
-        Title="Muazzam - CONMOD Project" Height="600" Width="800"
+        x:Class="MO_TERMINAL.TracingWindow"
+        Title="Everything at one place" Height="600" Width="800"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#333333"/>
         <SolidColorBrush x:Key="SecondaryBackgroundColor" Color="#444444"/>
         <SolidColorBrush x:Key="AccentColor" Color="#007ACC"/>
+        <SolidColorBrush x:Key="TabsColor" Color="#000000"/>
         <SolidColorBrush x:Key="PrimaryTextColor" Color="#FFFFFF"/>
         <SolidColorBrush x:Key="SecondaryTextColor" Color="#CCCCCC"/>
         <SolidColorBrush x:Key="SelectedTextColor" Color="#000000"/>
@@ -66,7 +67,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
                 <Button Content="Refresh" Click="RefreshButton_Click" Width="80" />
                 <Button Content="Connect" Click="ConnectButton_Click" Width="80" />
-                <Button Content="Disconnect" Click="DisconnectButton_Click" Width="80" />
+                <Button Content="Disconnect" Click="DisconnectButton_Click" Width="93" />
             </StackPanel>
         </DockPanel>
 
@@ -101,20 +102,24 @@
             <!-- Frame 1 -->
             <TabItem Header="Frame 1">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="101*"/>
+                        <ColumnDefinition Width="473*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <ScrollViewer x:Name="Frame1ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
+                    <ScrollViewer x:Name="Frame1ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.ColumnSpan="2">
                         <TextBox x:Name="Frame1Data" IsReadOnly="True" 
                                  Foreground="{StaticResource PrimaryTextColor}" 
                                  Background="{StaticResource SecondaryBackgroundColor}" 
                                  BorderBrush="{StaticResource AccentColor}" BorderThickness="1"/>
                     </ScrollViewer>
-                    <TextBox x:Name="Frame1Input" KeyDown="Frame1Input_KeyDown" Margin="10" 
+                    <TextBox x:Name="Frame1Input" KeyDown="Frame1Input_KeyDown" Margin="10,10,10,10" 
                              Foreground="{StaticResource PrimaryTextColor}" 
                              Background="{StaticResource SecondaryBackgroundColor}" 
-                             BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1"/>
+                             BorderBrush="{StaticResource AccentColor}" BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
 

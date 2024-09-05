@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wBi2m/GyM7Y=",
+  "dgSpecHash": "ngtgmlwrEdA=",
   "success": true,
-  "projectFilePath": "C:\\Programming\\Outside Repo\\Mo-Artifactory-Tool\\Mo-Artifactory-Tool.csproj",
+  "projectFilePath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Artifactory-Tool\\Mo-Artifactory-Tool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MAqeel\\.nuget\\packages\\materialdesigncolors\\3.1.0\\materialdesigncolors.3.1.0.nupkg.sha512",
     "C:\\Users\\MAqeel\\.nuget\\packages\\materialdesignthemes\\5.1.0\\materialdesignthemes.5.1.0.nupkg.sha512",
