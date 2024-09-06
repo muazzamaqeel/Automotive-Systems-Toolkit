@@ -60,7 +60,7 @@ namespace WpfApp1.Views.TrFilesSync {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp1;V1.0.0.0;component/views/trfilessync/trfilessync_settings.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp1;component/views/trfilessync/trfilessync_settings.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\TrFilesSync\TrFilesSync_Settings.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

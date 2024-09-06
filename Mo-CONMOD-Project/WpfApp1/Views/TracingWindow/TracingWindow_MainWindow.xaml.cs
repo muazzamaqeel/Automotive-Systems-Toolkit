@@ -322,5 +322,54 @@ namespace MO_TERMINAL
         {
 
         }
+
+
+
+        //Buttons Behaviour
+
+        // Method for Password Button Click
+        private void PasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Get the currently selected frame
+            int selectedFrame = FrameTabControl.SelectedIndex;
+
+            // Ensure a valid frame is selected
+            if (selectedFrame >= 0 && selectedFrame < 4)
+            {
+                string command = "3CBPwd?";  // Command for Password
+
+                // Send the command to the corresponding frame's serial port
+                serialPortManager.SendData(selectedFrame, command);
+                //MessageBox.Show($"Sent command: {command} to frame {selectedFrame + 1}", "Command Sent", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        // Method for Reset Button Click
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Get the currently selected frame
+            int selectedFrame = FrameTabControl.SelectedIndex;
+
+            // Ensure a valid frame is selected
+            if (selectedFrame >= 0 && selectedFrame < 4)
+            {
+                string command = "r";  // Command for Reset
+
+                // Send the command to the corresponding frame's serial port
+                serialPortManager.SendData(selectedFrame, command);
+                //MessageBox.Show($"Sent command: {command} to frame {selectedFrame + 1}", "Command Sent", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+
     }
 }

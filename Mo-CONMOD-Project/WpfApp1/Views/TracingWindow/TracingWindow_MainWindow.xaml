@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av"
         x:Class="MO_TERMINAL.TracingWindow"
-        Title="Everything at one place" Height="850" Width="850"
+        Title="Everything at one place" Height="807" Width="1047"
         WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
 
     <Window.Resources>
@@ -89,12 +89,12 @@
 
     <Grid Background="{StaticResource PrimaryBackgroundColor}" Margin="0,0,0,5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" MinHeight="60"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="217"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <!-- Header Section -->
@@ -108,7 +108,7 @@
         </DockPanel>
 
         <!-- COM Port and Controls Section -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10">
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,10,10,10">
             <TextBlock Text="Select COM Port" Foreground="{StaticResource PrimaryTextColor}" Margin="0,0,0,5"/>
             <ListBox x:Name="COMPortList" SelectionChanged="COMPortList_SelectionChanged" 
                      Foreground="{StaticResource PrimaryTextColor}" 
@@ -273,159 +273,159 @@
         </StackPanel>
 
         <!-- Data Display Section -->
-<TabControl Grid.Row="1" Grid.Column="1" Margin="10" x:Name="FrameTabControl"
+        <TabControl Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" x:Name="FrameTabControl"
             Background="{StaticResource SecondaryBackgroundColor}"
             Foreground="{StaticResource PrimaryTextColor}"
             BorderBrush="{StaticResource AccentColor}"
             BorderThickness="1">
 
-    <TabControl.Resources>
-        <!-- Custom TabItem Template -->
-        <Style TargetType="TabItem">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="TabItem">
-                        <Grid>
-                            <!-- Tab Border -->
-                            <Border Name="TabBorder" 
+            <TabControl.Resources>
+                <!-- Custom TabItem Template -->
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Grid>
+                                    <!-- Tab Border -->
+                                    <Border Name="TabBorder" 
                                     Background="{TemplateBinding Background}" 
                                     BorderBrush="{StaticResource AccentColor}" 
                                     BorderThickness="1"
                                     CornerRadius="3,3,0,0"
                                     Padding="10,5">
-                                <!-- Content Presenter for Tab Header -->
-                                <ContentPresenter x:Name="ContentSite"
+                                        <!-- Content Presenter for Tab Header -->
+                                        <ContentPresenter x:Name="ContentSite"
                                                   VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"
                                                   ContentSource="Header"
                                                   RecognizesAccessKey="True" />
-                            </Border>
-                        </Grid>
+                                    </Border>
+                                </Grid>
 
-                        <!-- Triggers to change styles based on selection -->
-                        <ControlTemplate.Triggers>
-                            <!-- When Tab is selected -->
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="TabBorder" Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
-                                <Setter TargetName="TabBorder" Property="BorderBrush" Value="{StaticResource AccentColor}"/>
-                                <Setter TargetName="TabBorder" Property="BorderThickness" Value="3"/>
-                                <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="Black"/>
-                            </Trigger>
-                            <!-- When Tab is not selected -->
-                            <Trigger Property="IsSelected" Value="False">
-                                <Setter TargetName="TabBorder" Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
-                                <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="Black"/>
-                                <Setter TargetName="TabBorder" Property="BorderThickness" Value="1"/>
-                            </Trigger>
+                                <!-- Triggers to change styles based on selection -->
+                                <ControlTemplate.Triggers>
+                                    <!-- When Tab is selected -->
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="TabBorder" Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
+                                        <Setter TargetName="TabBorder" Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                                        <Setter TargetName="TabBorder" Property="BorderThickness" Value="3"/>
+                                        <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="Black"/>
+                                    </Trigger>
+                                    <!-- When Tab is not selected -->
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="TabBorder" Property="Background" Value="{StaticResource SecondaryBackgroundColor}"/>
+                                        <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="Black"/>
+                                        <Setter TargetName="TabBorder" Property="BorderThickness" Value="1"/>
+                                    </Trigger>
 
-                            <!-- Handle disabled state -->
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="{StaticResource SecondaryTextColor}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </TabControl.Resources>
+                                    <!-- Handle disabled state -->
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="ContentSite" Property="TextElement.Foreground" Value="{StaticResource SecondaryTextColor}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
 
-    <!-- Frame 1 -->
-    <TabItem Header="WUC - COM3">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="101*"/>
-                <ColumnDefinition Width="473*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <ScrollViewer x:Name="Frame1ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.ColumnSpan="2">
-                <TextBox x:Name="Frame1Data" IsReadOnly="True" 
+            <!-- Frame 1 -->
+            <TabItem Header="Frame 1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="101*"/>
+                        <ColumnDefinition Width="473*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer x:Name="Frame1ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.ColumnSpan="2">
+                        <TextBox x:Name="Frame1Data" IsReadOnly="True" 
                          Foreground="{StaticResource PrimaryTextColor}" 
                          Background="{StaticResource SecondaryBackgroundColor}" 
                          BorderBrush="{StaticResource AccentColor}" 
                          BorderThickness="1"/>
-            </ScrollViewer>
-            <TextBox x:Name="Frame1Input" KeyDown="Frame1Input_KeyDown" Margin="10,10,10,10" 
+                    </ScrollViewer>
+                    <TextBox x:Name="Frame1Input" KeyDown="Frame1Input_KeyDown" Margin="10,10,10,10" 
                      Foreground="{StaticResource PrimaryTextColor}" 
                      Background="{StaticResource SecondaryBackgroundColor}" 
                      BorderBrush="{StaticResource AccentColor}" 
                      BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="2"/>
-        </Grid>
-    </TabItem>
+                </Grid>
+            </TabItem>
 
-    <!-- Frame 2 -->
-    <TabItem Header="NAD - COM5">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <ScrollViewer x:Name="Frame2ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                <TextBox x:Name="Frame2Data" IsReadOnly="True" 
+            <!-- Frame 2 -->
+            <TabItem Header="Frame 2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer x:Name="Frame2ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
+                        <TextBox x:Name="Frame2Data" IsReadOnly="True" 
                          Foreground="{StaticResource PrimaryTextColor}" 
                          Background="{StaticResource SecondaryBackgroundColor}" 
                          BorderBrush="{StaticResource AccentColor}" 
                          BorderThickness="1"/>
-            </ScrollViewer>
-            <TextBox x:Name="Frame2Input" KeyDown="Frame2Input_KeyDown" Margin="10" 
+                    </ScrollViewer>
+                    <TextBox x:Name="Frame2Input" KeyDown="Frame2Input_KeyDown" Margin="10" 
                      Foreground="{StaticResource PrimaryTextColor}" 
                      Background="{StaticResource SecondaryBackgroundColor}" 
                      BorderBrush="{StaticResource AccentColor}" 
                      BorderThickness="1" Grid.Row="1"/>
-        </Grid>
-    </TabItem>
+                </Grid>
+            </TabItem>
 
-    <!-- Frame 3 -->
-    <TabItem Header="Frame 3">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <ScrollViewer x:Name="Frame3ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                <TextBox x:Name="Frame3Data" IsReadOnly="True" 
+            <!-- Frame 3 -->
+            <TabItem Header="Frame 3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer x:Name="Frame3ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
+                        <TextBox x:Name="Frame3Data" IsReadOnly="True" 
                          Foreground="{StaticResource PrimaryTextColor}" 
                          Background="{StaticResource SecondaryBackgroundColor}" 
                          BorderBrush="{StaticResource AccentColor}" 
                          BorderThickness="1"/>
-            </ScrollViewer>
-            <TextBox x:Name="Frame3Input" KeyDown="Frame3Input_KeyDown" Margin="10" 
+                    </ScrollViewer>
+                    <TextBox x:Name="Frame3Input" KeyDown="Frame3Input_KeyDown" Margin="10" 
                      Foreground="{StaticResource PrimaryTextColor}" 
                      Background="{StaticResource SecondaryBackgroundColor}" 
                      BorderBrush="{StaticResource AccentColor}" 
                      BorderThickness="1" Grid.Row="1"/>
-        </Grid>
-    </TabItem>
+                </Grid>
+            </TabItem>
 
-    <!-- Frame 4 -->
-    <TabItem Header="Frame 4">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <ScrollViewer x:Name="Frame4ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
-                <TextBox x:Name="Frame4Data" IsReadOnly="True" 
+            <!-- Frame 4 -->
+            <TabItem Header="Frame 4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer x:Name="Frame4ScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="0">
+                        <TextBox x:Name="Frame4Data" IsReadOnly="True" 
                          Foreground="{StaticResource PrimaryTextColor}" 
                          Background="{StaticResource SecondaryBackgroundColor}" 
                          BorderBrush="{StaticResource AccentColor}" 
                          BorderThickness="1"/>
-            </ScrollViewer>
-            <TextBox x:Name="Frame4Input" KeyDown="Frame4Input_KeyDown" Margin="10" 
+                    </ScrollViewer>
+                    <TextBox x:Name="Frame4Input" KeyDown="Frame4Input_KeyDown" Margin="10" 
                      Foreground="{StaticResource PrimaryTextColor}" 
                      Background="{StaticResource SecondaryBackgroundColor}" 
                      BorderBrush="{StaticResource AccentColor}" 
                      BorderThickness="1" Grid.Row="1"/>
-        </Grid>
-    </TabItem>
+                </Grid>
+            </TabItem>
 
-</TabControl>
+        </TabControl>
 
 
         <!-- Bottom Left Toggle Switch and Controls -->
-        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="13,0,0,0" Height="327" Width="177">
+        <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,363,0,0" Height="332" Width="198">
             <ToggleButton x:Name="toggleSwitch"
                           Width="70"
                           Background="Gray"
@@ -434,18 +434,27 @@
                           Unchecked="ToggleSwitch_Unchecked"
                           Style="{StaticResource SwitchStyle}"
                           HorizontalAlignment="Left"
-                          VerticalAlignment="Top" Margin="18,254,0,0"/>
-            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="18,289,0,14"><Run Text="Toggle Switch"/></TextBlock>
+                          VerticalAlignment="Top" Margin="18,206,0,0"/>
+            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="18,246,0,57"><Run Text="Toggle Switch"/></TextBlock>
 
             <!-- Buttons at Bottom -->
-            <Button Content="K15 ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="97,61,10,222" Width="70"/>
-            <Button Content="Reset" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="18,61,89,222" Width="70"/>
-            <Button Content="K15 Off" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="97,106,10,177" Width="70"/>
-            <Button Content="WD ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="97,151,10,132" Width="70"/>
-            <Button Content="WD OFF" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="97,196,10,87" Width="70"/>
-            <Button Content="Password" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="48,16,49,267" Width="80"/>
-            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="18,106,89,177" Width="70"/>
-            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="18,151,89,132" Width="70"/>
+            <Button Content="K15 ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,63,0,224" Width="NaN"/>
+            
+            
+            
+          <Button Content="K15 Off" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,108,0,179" Width="NaN"/>
+            <Button Content="WD ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,153,0,134" Width="NaN"/>
+            <Button Content="WD OFF" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,198,0,89" Width="NaN"/>
+            
+            
+            
+            
+            <Button Content="Password" Click="PasswordButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="39,21,27,271" Width="NaN"/>
+            <Button Content="Reset" Click="ResetButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,63,100,224" Width="NaN"/>
+
+
+            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,108,100,179" Width="NaN"/>
+            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,153,99,134" Width="NaN"/>
         </Grid>
     </Grid>
 </Window>
