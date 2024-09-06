@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
-        Title="Mo-Tools" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Mo-Tools" Height="700" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#2C3E50" Offset="0"/>
@@ -18,7 +18,7 @@
         <TextBlock Text="Everything at One Place" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,64,0,278"/>
 
         <!-- Button 1 - Dark theme -->
-        <Button Content="Settings" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="646,279,0,0" Foreground="White" FontSize="16">
+        <Button Content="Settings" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="120,586,0,0" Foreground="White" FontSize="16">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#34495E"/>
@@ -85,7 +85,7 @@
 
 
         <!-- Button 3 - Dark theme -->
-        <Button Content="Exit" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="646,335,0,0" Foreground="White" FontSize="16">
+        <Button Content="Exit" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="558,586,0,0" Foreground="White" FontSize="16">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#E74C3C"/>
@@ -107,33 +107,6 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#C0392B"/>
                             <Setter Property="Opacity" Value="1"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-        <Button Content="Tr. Files Sync" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="268,201,0,0" Foreground="White" FontSize="16">
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="#16A085"/>
-                    <Setter Property="BorderBrush" Value="Transparent"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}" 
-                                    BorderBrush="{TemplateBinding BorderBrush}" 
-                                    CornerRadius="10" 
-                                    BorderThickness="0">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="1"/>
-                            <Setter Property="Background" Value="#1ABC9C"/>
                         </Trigger>
                     </Style.Triggers>
                 </Style>
@@ -167,6 +140,33 @@
             </Button.Style>
         </Button>
         <Button Content="Coming Soon" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="558,201,0,0" Foreground="White" FontSize="16">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#16A085"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    CornerRadius="10" 
+                                    BorderThickness="0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="1"/>
+                            <Setter Property="Background" Value="#1ABC9C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Tr. Files Sync" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="269,201,0,0" Foreground="White" FontSize="16" Click="TrFilesButton_Click">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#16A085"/>

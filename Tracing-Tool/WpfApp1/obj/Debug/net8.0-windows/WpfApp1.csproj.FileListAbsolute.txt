@@ -152,5 +152,9 @@ C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-wind
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\Dashboard.g.cs
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.lref
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\Dashboard.baml
-C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow.baml
-C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow\TracingWindow_MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TrFilesSync\TrFilesSync_MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TracingWindow\TracingWindow_MainWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TrFilesSync\TrFilesSync_MainWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TrFilesSync\TrFilesSync_Settings.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\obj\Debug\net8.0-windows\Views\TrFilesSync\TrFilesSync_Settings.g.cs

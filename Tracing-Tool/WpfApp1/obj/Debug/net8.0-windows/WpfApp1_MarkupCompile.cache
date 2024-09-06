@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Git-Hub\Automotive-Systems-Toolkit\Tracing-Tool\WpfApp1\App.xaml
-2-1559801640
+41518402922
 
-8408055035
+10814505850
 201-2054396409
-Views\Dashboard.xaml;Views\TracingWindow.xaml;
+Views\Dashboard.xaml;Views\TracingWindow\TracingWindow_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_Settings.xaml;
 
 False
 

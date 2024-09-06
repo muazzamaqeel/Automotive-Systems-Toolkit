@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\serialportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:serialportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\clewareswitchcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:clewareswitchcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\tracingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\tracingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\trfilessync\\trfilessync_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\trfilessync\\trfilessync_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\tracing-tool\\wpfapp1\\components\\toggleswitchhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:components\\toggleswitchhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 213,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\AssemblyInfo.cs",
-              "RelativeToolTip": "AssemblyInfo.cs",
+              "DocumentIndex": 1,
+              "Title": "TrFilesSync_MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TrFilesSync\\TrFilesSync_MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\TrFilesSync\\TrFilesSync_MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TrFilesSync\\TrFilesSync_MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\TrFilesSync\\TrFilesSync_MainWindow.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T08:31:25.441Z",
+              "WhenOpened": "2024-09-06T08:19:20.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TracingWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\TracingWindow.xaml.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow.xaml.cs",
-              "RelativeToolTip": "Views\\TracingWindow.xaml.cs",
-              "ViewState": "AQIAABoBAAAAAAAAAAAgwEYBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T08:26:00.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TracingWindow.xaml",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow.xaml",
-              "RelativeDocumentMoniker": "Views\\TracingWindow.xaml",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow.xaml",
-              "RelativeToolTip": "Views\\TracingWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "TracingWindow_MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-05T08:25:57.861Z",
+              "WhenOpened": "2024-09-06T07:47:45.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Dashboard.xaml.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\Dashboard.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\Dashboard.xaml.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\Dashboard.xaml.cs",
-              "RelativeToolTip": "Views\\Dashboard.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T08:22:44.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-05T08:16:23.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Dashboard.xaml",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\Dashboard.xaml",
               "RelativeDocumentMoniker": "Views\\Dashboard.xaml",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Views\\Dashboard.xaml",
               "RelativeToolTip": "Views\\Dashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-05T07:56:28.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ToggleSwitchHandler.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Components\\ToggleSwitchHandler.cs",
-              "RelativeDocumentMoniker": "Components\\ToggleSwitchHandler.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\Components\\ToggleSwitchHandler.cs",
-              "RelativeToolTip": "Components\\ToggleSwitchHandler.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAowJsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T14:04:59.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SerialPortManager.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\SerialPortManager.cs",
-              "RelativeDocumentMoniker": "SerialPortManager.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\SerialPortManager.cs",
-              "RelativeToolTip": "SerialPortManager.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAowH0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:56:46.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClewareSwitchControl.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\ClewareSwitchControl.cs",
-              "RelativeDocumentMoniker": "ClewareSwitchControl.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Tracing-Tool\\WpfApp1\\ClewareSwitchControl.cs",
-              "RelativeToolTip": "ClewareSwitchControl.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAowF0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:56:46.451Z",
+              "WhenOpened": "2024-09-06T07:46:27.268Z",
               "EditorCaption": ""
             }
           ]

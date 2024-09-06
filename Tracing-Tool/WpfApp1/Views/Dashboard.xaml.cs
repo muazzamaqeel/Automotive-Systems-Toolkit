@@ -1,5 +1,6 @@
 ﻿using System.Windows;
-using MO_TERMINAL;  // Make sure this is included
+using MO_TERMINAL;
+using WpfApp1.Views.TrFilesSync;  // Make sure this is included
 
 namespace WpfApp1.Views
 {
@@ -13,11 +14,23 @@ namespace WpfApp1.Views
         private void TracingButton_Click(object sender, RoutedEventArgs e)
         {
             // Open the TracingWindow
-            TracingWindow tracingWindow = new TracingWindow();
-            tracingWindow.Show();
+            TracingWindow TW_obj = new TracingWindow();
+            TW_obj.Show();
 
             // Close the current Dashboard window
             this.Close();
         }
+
+        private void TrFilesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the TracingWindow
+            TrFilesSync_MainWindow TRF_obj = new TrFilesSync_MainWindow();
+            TRF_obj.Show();
+
+            // Close the current Dashboard window
+            this.Close();
+        }
+
+        
     }
 }
