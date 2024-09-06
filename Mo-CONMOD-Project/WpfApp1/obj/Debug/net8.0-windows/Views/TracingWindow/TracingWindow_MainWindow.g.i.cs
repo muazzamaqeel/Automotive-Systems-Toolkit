@@ -188,7 +188,7 @@ namespace MO_TERMINAL {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp1;component/views/tracingwindow/tracingwindow_mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp1;V1.0.0.0;component/views/tracingwindow/tracingwindow_mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\TracingWindow\TracingWindow_MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

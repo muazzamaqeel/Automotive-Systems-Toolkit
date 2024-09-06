@@ -8,6 +8,8 @@ using System.Windows.Input;
 using WpfApp1;
 using MO_TERMINAL;
 using WpfApp1.Components.TracingWindow;
+using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace MO_TERMINAL
 {
@@ -152,13 +154,27 @@ namespace MO_TERMINAL
                 frameDataTextBox.AppendText(data);
                 ScrollToBottom(frameScrollViewer!);
 
-                // Update the TabItem header with the data type and port name
-                if (!string.IsNullOrEmpty(dataType) && frameTabItem != null)
+                // Update the TabItem header based on data type and port name
+                if (!string.IsNullOrEmpty(data) && frameTabItem != null)
                 {
-                    frameTabItem.Header = $"{dataType} - {portName}";
+                    // Logic to identify data type
+                    if (data.Contains("W01") || data.Contains("WUC"))
+                    {
+                        frameTabItem.Header = $"WUC - {portName}";
+                    }
+                    else if (data.Contains("ECALL_STATE") || data.Contains("NAD") || data.Contains("Enter HSM BL") || data.Contains("Set JTAG Done"))
+                    {
+                        frameTabItem.Header = $"NAD - {portName}";
+                    }
+                    else if (data.Contains("V2X") || data.Contains("SEQ_A_OK.") || data.Contains("SEQ_A_OK"))
+                    {
+                        frameTabItem.Header = $"V2X - {portName}";
+                    }
+                    // You can extend this logic to handle IOC or any other data type
                 }
             }
         }
+
 
 
         private void ScrollToBottom(ScrollViewer scrollViewer)
@@ -169,6 +185,7 @@ namespace MO_TERMINAL
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
             LoadCOMPorts();
+            StartAutoDetection();
         }
 
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
@@ -221,6 +238,13 @@ namespace MO_TERMINAL
         }
 
 
+        // In order to refresh the CONPORTS when we are discconecting a serial connection
+        private void RefreshCOMPorts()
+        {
+            LoadCOMPorts();
+        }
+
+
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
             TabItem? selectedTab = FrameTabControl.SelectedItem as TabItem;
@@ -234,7 +258,7 @@ namespace MO_TERMINAL
                 if (selectedTab != null)
                 {
                     string portName = selectedTab.Header.ToString().Split('-').Last().Trim();
-                    Dispatcher.InvokeAsync(() => COMPortList.Items.Add(portName));
+                    //Dispatcher.InvokeAsync(() => COMPortList.Items.Add(portName));
                     selectedTab.Header = $"Frame {selectedFrame + 1}";
                     MessageBox.Show($"Disconnected from {portName}", "Disconnection Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -243,6 +267,7 @@ namespace MO_TERMINAL
             {
                 MessageBox.Show("No connection to close.", "Disconnection Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            RefreshCOMPorts();
         }
 
         private void TurnOnButton_Click(object sender, RoutedEventArgs e)
