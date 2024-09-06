@@ -1,6 +1,9 @@
 ﻿using System.Windows;
 using MO_TERMINAL;
-using WpfApp1.Views.TrFilesSync;  // Make sure this is included
+using WpfApp1.Views.TrFilesSync;  
+using WpfApp1.Views.V2XVersionCheck;
+
+
 
 namespace WpfApp1.Views
 {
@@ -31,6 +34,16 @@ namespace WpfApp1.Views
             this.Close();
         }
 
-        
+        private void V2XVersionCheck_Click(object sender, RoutedEventArgs e)
+        {
+            // Open the TracingWindow
+            V2XVersionCheck_MainWindow V2X_obj = new V2XVersionCheck_MainWindow();
+            V2X_obj.Show();
+
+            // Close the current Dashboard window
+            this.Close();
+        }
+
+
     }
 }

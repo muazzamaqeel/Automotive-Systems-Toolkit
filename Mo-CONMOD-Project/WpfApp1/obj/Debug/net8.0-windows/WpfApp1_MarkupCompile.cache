@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\App.xaml
-41518402922
+5-100264995
 
-10814505850
+11822463216
 201-2054396409
-Views\Dashboard.xaml;Views\TracingWindow\TracingWindow_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_Settings.xaml;
+Views\Dashboard.xaml;Views\TracingWindow\TracingWindow_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_MainWindow.xaml;Views\TrFilesSync\TrFilesSync_Settings.xaml;Views\V2XVersionCheck\V2XVersionCheck_MainWindow.xaml;
 
 False
 

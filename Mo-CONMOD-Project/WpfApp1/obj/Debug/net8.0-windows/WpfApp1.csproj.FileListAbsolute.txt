@@ -237,3 +237,5 @@ C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0
 C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0-windows\Views\V2XVersionCheck\V2XVersionCheck_MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\WpfApp1\obj\Debug\net8.0-windows\Views\V2XVersionCheck\V2XVersionCheck_MainWindow.g.cs

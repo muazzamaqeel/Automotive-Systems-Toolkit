@@ -9,16 +9,19 @@
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#2C3E50" Offset="0"/>
-            <GradientStop Color="#34495E" Offset="1"/>
+            <GradientStop Color="#000000" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <!-- Heading Text -->
-        <TextBlock Text="Everything at One Place" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,64,0,278"/>
+        <TextBlock Text="      CONMOD - WELT" FontSize="34" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="223,212,0,407" Width="386"/>
 
         <!-- Button 1 - Dark theme -->
-        <Button Content="Settings" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="120,586,0,0" Foreground="White" FontSize="16">
+        <Button Content="Settings" Height="40" VerticalAlignment="Top" Margin="356,395,374,0" Foreground="White" FontSize="16">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#34495E"/>
@@ -46,7 +49,7 @@
         </Button>
 
         <!-- Button 2 with animation - Dark theme -->
-        <Button Content="Tracing" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="120,201,0,0" Foreground="White" FontSize="16" Click="TracingButton_Click">
+        <Button Content="Tracing" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,315,0,0" Foreground="White" FontSize="16" Click="TracingButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#16A085"/>
@@ -85,7 +88,7 @@
 
 
         <!-- Button 3 - Dark theme -->
-        <Button Content="Exit" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="558,586,0,0" Foreground="White" FontSize="16">
+        <Button Content="Exit" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="356,459,0,0" Foreground="White" FontSize="16">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" Value="#E74C3C"/>
@@ -112,7 +115,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="Coming Soon" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="416,201,0,0" Foreground="White" FontSize="16">
+        <Button Content="V2X Version Check " Width="165" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="435,315,0,0" Foreground="White" FontSize="16" Click="V2XVersionCheck_Click">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#16A085"/>
@@ -139,7 +142,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="Coming Soon" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="558,201,0,0" Foreground="White" FontSize="16">
+        <Button Content="Coming Soon" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="630,315,0,0" Foreground="White" FontSize="16">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#16A085"/>
@@ -166,7 +169,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="Tr. Files Sync" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="269,201,0,0" Foreground="White" FontSize="16" Click="TrFilesButton_Click">
+        <Button Content="Tr. Files Sync" Width="165" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="245,315,0,0" Foreground="White" FontSize="16" Click="TrFilesButton_Click">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#16A085"/>
