@@ -5,8 +5,6 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp1.Views.TrFilesSync;  // Ensure the correct namespace is imported
-using System.Windows.Shapes;  // For shapes
 
 namespace WpfApp1.Views.TrFilesSync
 {
@@ -43,7 +41,7 @@ namespace WpfApp1.Views.TrFilesSync
                 }
                 else
                 {
-                    Log($"Looking for authToken at: {System.IO.Path.GetFullPath(authTokenPath)}");  // Fully qualified System.IO.Path
+                    Log($"Looking for authToken at: {System.IO.Path.GetFullPath(authTokenPath)}");
                 }
             }
             catch (Exception ex)
@@ -57,7 +55,13 @@ namespace WpfApp1.Views.TrFilesSync
             if (IsAuthTokenValid())
             {
                 Log("Sync .tr Files action initiated.");
+
+                // Sync RC folder
                 await SyncRepository($"{baseUrl}/api/storage/{repoName}/RC");
+
+                // Sync Production folder
+                await SyncRepository($"{baseUrl}/api/storage/{repoName}/Production");
+
                 Log("Sync .tr Files action completed.");
             }
         }
@@ -95,8 +99,8 @@ namespace WpfApp1.Views.TrFilesSync
         private async Task DownloadFile(string filePath)
         {
             string relativePath = filePath.Replace($"{baseUrl}/api/storage/", "");
-            string localPath = System.IO.Path.Combine(localRootFolder, relativePath);  // Fully qualified System.IO.Path
-            Directory.CreateDirectory(System.IO.Path.GetDirectoryName(localPath));  // Fully qualified System.IO.Path
+            string localPath = System.IO.Path.Combine(localRootFolder, relativePath);  // Maintain the folder structure
+            Directory.CreateDirectory(System.IO.Path.GetDirectoryName(localPath));  // Create local directory structure if not exists
 
             Log($"Downloading {filePath}...");
 
@@ -136,7 +140,6 @@ namespace WpfApp1.Views.TrFilesSync
         {
             try
             {
-                // Make an API call to verify the connection to the repository
                 string apiUrl = $"{baseUrl}/api/repositories/{repoName}";
                 var response = await client.GetAsync(apiUrl);
 

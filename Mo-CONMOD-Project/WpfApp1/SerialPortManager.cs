@@ -9,6 +9,7 @@ namespace WpfApp1
     public class SerialPortManager
     {
         private SerialPort[] serialPorts = new SerialPort[4];
+        private Dictionary<int, string> _connectedPorts = new Dictionary<int, string>();
 
         public string[] GetAvailablePorts()
         {
@@ -25,6 +26,7 @@ namespace WpfApp1
                     {
                         serialPorts[frameIndex] = new SerialPort(portName, baudRate);
                         serialPorts[frameIndex].Open();
+                        _connectedPorts[frameIndex] = portName; // Track the connected port
                         return true;
                     }
                     catch (UnauthorizedAccessException)
@@ -66,6 +68,7 @@ namespace WpfApp1
                 {
                     serialPorts[frameIndex].Dispose();
                     serialPorts[frameIndex] = null;
+                    _connectedPorts.Remove(frameIndex); // Remove from connected ports
                 }
             }
         }

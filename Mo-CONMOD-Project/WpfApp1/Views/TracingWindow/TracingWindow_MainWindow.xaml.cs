@@ -19,6 +19,9 @@ namespace MO_TERMINAL
         private ClewareSwitchControl switchControl;
         private ToggleSwitchHandler _toggleSwitchHandler; // Declare ToggleSwitchHandler
 
+        // Dictionary to track connected ports
+        private Dictionary<int, string> _connectedPorts = new Dictionary<int, string>();
+
         public TracingWindow()
         {
             InitializeComponent(); // Initialize the components first
@@ -28,7 +31,7 @@ namespace MO_TERMINAL
             {
                 _toggleSwitchHandler = new ToggleSwitchHandler(toggleSwitch);
 
-                // Now link the ToggleButton's Checked and Unchecked events after handler initialization
+                // Link the ToggleButton's Checked and Unchecked events after handler initialization
                 toggleSwitch.Checked += ToggleSwitch_Checked;
                 toggleSwitch.Unchecked += ToggleSwitch_Unchecked;
             }
@@ -58,7 +61,6 @@ namespace MO_TERMINAL
             _toggleSwitchHandler?.ToggleSwitch_Unchecked(sender, e);
         }
 
-
         private void MainWindow_StateChanged(object sender, EventArgs e)
         {
             if (_toggleSwitchHandler != null)
@@ -81,7 +83,6 @@ namespace MO_TERMINAL
                 COMPortList.Items.Add(port);
             }
         }
-
 
         private void StartAutoDetection()
         {
@@ -175,8 +176,6 @@ namespace MO_TERMINAL
             }
         }
 
-
-
         private void ScrollToBottom(ScrollViewer scrollViewer)
         {
             scrollViewer?.ScrollToEnd();
@@ -219,6 +218,9 @@ namespace MO_TERMINAL
                             });
                         });
 
+                        // Store the connected port in the dictionary
+                        _connectedPorts[selectedFrame] = selectedPort;
+
                         MessageBox.Show($"Connected to {selectedPort}", "Connection Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
@@ -237,13 +239,11 @@ namespace MO_TERMINAL
             }
         }
 
-
-        // In order to refresh the CONPORTS when we are discconecting a serial connection
+        // In order to refresh the COM ports when disconnecting a serial connection
         private void RefreshCOMPorts()
         {
             LoadCOMPorts();
         }
-
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
@@ -255,10 +255,14 @@ namespace MO_TERMINAL
                 serialPortManager.Disconnect(selectedFrame);
                 ClearFrameData(selectedFrame);
 
+                if (_connectedPorts.ContainsKey(selectedFrame))
+                {
+                    _connectedPorts.Remove(selectedFrame); // Remove the port from the dictionary
+                }
+
                 if (selectedTab != null)
                 {
                     string portName = selectedTab.Header.ToString().Split('-').Last().Trim();
-                    //Dispatcher.InvokeAsync(() => COMPortList.Items.Add(portName));
                     selectedTab.Header = $"Frame {selectedFrame + 1}";
                     MessageBox.Show($"Disconnected from {portName}", "Disconnection Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -331,6 +335,63 @@ namespace MO_TERMINAL
                     Frame4Data.Clear();
                     break;
             }
+
+            // Reload the latest traces after clearing
+            RefreshFrameData(frameIndex);
+        }
+
+        private void RefreshFrameData(int frameIndex)
+        {
+            string? selectedPort = null;
+
+            // Ensure that the frame index exists within the COMPortList items
+            if (frameIndex < COMPortList.Items.Count)
+            {
+                selectedPort = COMPortList.Items[frameIndex]?.ToString();
+            }
+
+            // If selectedPort is still null or empty, and the port is connected, skip the error and proceed.
+            if (string.IsNullOrEmpty(selectedPort))
+            {
+                if (_connectedPorts.ContainsKey(frameIndex))
+                {
+                    // Use the connected port
+                    selectedPort = _connectedPorts[frameIndex];
+                }
+                else
+                {
+                    // If the port is not connected, show an error
+                    MessageBox.Show($"No COM port available for frame {frameIndex + 1}.", "Port Not Available", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return; // Exit the method if no valid port is available
+                }
+            }
+
+            if (!string.IsNullOrEmpty(selectedPort))
+            {
+                int baudRate = 115200; // Use the desired baud rate
+                Task.Run(async () =>
+                {
+                    bool connected = await serialPortManager.ConnectAsync(frameIndex, selectedPort, baudRate);
+                    if (connected)
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            serialPortManager.RegisterDataReceivedHandler(frameIndex, (s, args) =>
+                            {
+                                string data = serialPortManager.ReadExisting(frameIndex);
+                                string dataType = serialPortManager.IdentifyDataType(data);
+                                Dispatcher.Invoke(() => DisplayData(frameIndex, data, dataType, selectedPort));
+                            });
+                        });
+                    }
+                });
+            }
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedFrame = FrameTabControl.SelectedIndex; // Get the currently selected frame
+            ClearFrameData(selectedFrame); // Clear the data for the selected frame
         }
 
         private void COMPortList_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
@@ -343,19 +404,13 @@ namespace MO_TERMINAL
             base.OnClosed(e);
         }
 
-        private void Frame1Data_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        private void Frame1Data_TextChanged(object sender, TextChangedEventArgs e) { }
 
-        }
-
-
-
-        //Buttons Behaviour
+        // Buttons Behavior
 
         // Method for Password Button Click
         private void PasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get the currently selected frame
             int selectedFrame = FrameTabControl.SelectedIndex;
 
             // Ensure a valid frame is selected
@@ -365,7 +420,6 @@ namespace MO_TERMINAL
 
                 // Send the command to the corresponding frame's serial port
                 serialPortManager.SendData(selectedFrame, command);
-                //MessageBox.Show($"Sent command: {command} to frame {selectedFrame + 1}", "Command Sent", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -376,7 +430,6 @@ namespace MO_TERMINAL
         // Method for Reset Button Click
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get the currently selected frame
             int selectedFrame = FrameTabControl.SelectedIndex;
 
             // Ensure a valid frame is selected
@@ -386,15 +439,11 @@ namespace MO_TERMINAL
 
                 // Send the command to the corresponding frame's serial port
                 serialPortManager.SendData(selectedFrame, command);
-                //MessageBox.Show($"Sent command: {command} to frame {selectedFrame + 1}", "Command Sent", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
                 MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-
-
     }
 }

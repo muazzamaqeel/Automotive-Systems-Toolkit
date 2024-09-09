@@ -1,12 +1,70 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\serialportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:serialportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 213,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TracingWindow_MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-09T08:26:24.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SerialPortManager.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\SerialPortManager.cs",
+              "RelativeDocumentMoniker": "SerialPortManager.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\SerialPortManager.cs",
+              "RelativeToolTip": "SerialPortManager.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAUwIAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:55:39.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TracingWindow_MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "ViewState": "AQIAAKQBAAAAAAAAAAAiwMEBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T07:43:01.747Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

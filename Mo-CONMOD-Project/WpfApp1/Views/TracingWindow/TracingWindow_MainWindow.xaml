@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av"
         x:Class="MO_TERMINAL.TracingWindow"
-        Title="Everything at one place" Height="807" Width="1047"
+        Title="Mo-Tools" Height="807" Width="1047"
         WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
 
     <Window.Resources>
@@ -33,6 +33,34 @@
                                 BorderBrush="{TemplateBinding BorderBrush}" 
                                 CornerRadius="10" 
                                 BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1ABC9C"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="CustomRedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        CornerRadius="10" 
+                        BorderThickness="0">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -434,27 +462,35 @@
                           Unchecked="ToggleSwitch_Unchecked"
                           Style="{StaticResource SwitchStyle}"
                           HorizontalAlignment="Left"
-                          VerticalAlignment="Top" Margin="18,206,0,0"/>
-            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="18,246,0,57"><Run Text="Toggle Switch"/></TextBlock>
+                          VerticalAlignment="Top" Margin="18,263,0,0"/>
+            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="18,303,0,0"><Run Text="Toggle Switch"/></TextBlock>
 
             <!-- Buttons at Bottom -->
             <Button Content="K15 ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,63,0,224" Width="NaN"/>
-            
-            
-            
-          <Button Content="K15 Off" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,108,0,179" Width="NaN"/>
+
+
+
+            <Button Content="K15 Off" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,108,0,179" Width="NaN"/>
             <Button Content="WD ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,153,0,134" Width="NaN"/>
             <Button Content="WD OFF" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,198,0,89" Width="NaN"/>
-            
-            
-            
-            
+
+
+
+
             <Button Content="Password" Click="PasswordButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="39,21,27,271" Width="NaN"/>
-            <Button Content="Reset" Click="ResetButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,63,100,224" Width="NaN"/>
+            <Button Content="Reset" Click="ResetButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,66,99,226" Width="NaN"/>
 
 
-            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,108,100,179" Width="NaN"/>
-            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="10,153,99,134" Width="NaN"/>
+            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,156,99,136" Width="NaN"/>
+            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,201,98,91" Width="NaN"/>
+
+            <Button Content="Clear" Click="ClearButton_Click" Style="{StaticResource CustomRedButtonStyle}" Margin="11,111,99,181" Width="NaN"/>
+
+
+
+
+
+
         </Grid>
     </Grid>
 </Window>
