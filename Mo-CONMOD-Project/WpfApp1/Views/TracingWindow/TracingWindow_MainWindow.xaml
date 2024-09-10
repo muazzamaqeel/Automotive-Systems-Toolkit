@@ -46,6 +46,9 @@
         </Style>
 
 
+        <!-- Clear Trace - Custom Layout -->
+
+
         <Style x:Key="CustomRedButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="Red"/>
             <Setter Property="FontSize" Value="16"/>
@@ -72,6 +75,41 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        
+        
+        
+        <!-- Freeze Trace - Custom Layout -->
+        <Style x:Key="CustomOrangeButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        CornerRadius="10" 
+                        BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <!-- Change background color when the button is hovered over -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1ABC9C"/>
+                    <!-- Change to teal when hovered -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
 
         <!-- ToggleButton Style -->
         <Style x:Key="SwitchStyle" TargetType="{x:Type ToggleButton}">
@@ -453,7 +491,7 @@
 
 
         <!-- Bottom Left Toggle Switch and Controls -->
-        <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,363,0,0" Height="332" Width="198">
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,310,0,0" Height="406" Width="198">
             <ToggleButton x:Name="toggleSwitch"
                           Width="70"
                           Background="Gray"
@@ -462,8 +500,8 @@
                           Unchecked="ToggleSwitch_Unchecked"
                           Style="{StaticResource SwitchStyle}"
                           HorizontalAlignment="Left"
-                          VerticalAlignment="Top" Margin="18,263,0,0"/>
-            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="18,303,0,0"><Run Text="Toggle Switch"/></TextBlock>
+                          VerticalAlignment="Top" Margin="14,322,0,0"/>
+            <TextBlock Foreground="{StaticResource PrimaryTextColor}" HorizontalAlignment="Left" Margin="14,362,0,0"><Run Text="Toggle Switch"/></TextBlock>
 
             <!-- Buttons at Bottom -->
             <Button Content="K15 ON" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,63,0,224" Width="NaN"/>
@@ -477,14 +515,24 @@
 
 
 
-            <Button Content="Password" Click="PasswordButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="39,21,27,271" Width="NaN"/>
-            <Button Content="Reset" Click="ResetButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,66,99,226" Width="NaN"/>
+            <Button Content="Password" Click="PasswordButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="108,57,2,309" Width="NaN" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.228"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.263"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="Reset" Click="ResetButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="0,103,99,263" Width="NaN"/>
 
 
-            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,156,99,136" Width="NaN"/>
-            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="11,201,98,91" Width="NaN"/>
+            <Button Content="BIOS" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="0,193,99,173" Width="NaN"/>
+            <Button Content="Marker" Click="RefreshButton_Click" Style="{StaticResource StandardButtonStyle}" Margin="0,238,98,128" Width="NaN"/>
 
-            <Button Content="Clear" Click="ClearButton_Click" Style="{StaticResource CustomRedButtonStyle}" Margin="11,111,99,181" Width="NaN"/>
+            <Button Content="Clear" Click="ClearButton_Click" Style="{StaticResource CustomRedButtonStyle}" Margin="0,148,99,218" Width="NaN"/>
+            <Button Content="Freeze Trace" Click="FreezeTraceButton_Click" Style="{StaticResource CustomOrangeButtonStyle}" Margin="0,58,98,308" Width="NaN"/>
 
 
 

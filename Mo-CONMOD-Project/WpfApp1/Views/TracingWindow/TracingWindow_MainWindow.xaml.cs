@@ -18,6 +18,8 @@ namespace MO_TERMINAL
         private SerialPortManager serialPortManager = new SerialPortManager();
         private ClewareSwitchControl switchControl;
         private ToggleSwitchHandler _toggleSwitchHandler; // Declare ToggleSwitchHandler
+        private bool isTraceFrozen = false; // Flag to check if trace is frozen
+
 
         // Dictionary to track connected ports
         private Dictionary<int, string> _connectedPorts = new Dictionary<int, string>();
@@ -151,14 +153,18 @@ namespace MO_TERMINAL
 
             if (frameDataTextBox != null)
             {
-                // Append data to the appropriate frame's TextBox
+                // Append the received data to the frame's TextBox
                 frameDataTextBox.AppendText(data);
-                ScrollToBottom(frameScrollViewer!);
 
-                // Update the TabItem header based on data type and port name
+                // Only auto-scroll if trace is not frozen
+                if (!isTraceFrozen && frameScrollViewer != null)
+                {
+                    ScrollToBottom(frameScrollViewer);
+                }
+
+                // Update the TabItem header based on the data type and port name
                 if (!string.IsNullOrEmpty(data) && frameTabItem != null)
                 {
-                    // Logic to identify data type
                     if (data.Contains("W01") || data.Contains("WUC"))
                     {
                         frameTabItem.Header = $"WUC - {portName}";
@@ -171,73 +177,78 @@ namespace MO_TERMINAL
                     {
                         frameTabItem.Header = $"V2X - {portName}";
                     }
-                    // You can extend this logic to handle IOC or any other data type
+                    // Extend this logic for more data types if needed
                 }
             }
         }
 
+
         private void ScrollToBottom(ScrollViewer scrollViewer)
         {
-            scrollViewer?.ScrollToEnd();
+            if (!isTraceFrozen)
+            {
+                scrollViewer?.ScrollToEnd();
+            }
         }
 
-        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+
+        private async void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-            LoadCOMPorts();
+            await Task.Run(() =>
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    LoadCOMPorts();  // Reload available COM ports on the UI thread
+                });
+            });
+
             StartAutoDetection();
         }
 
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
-            // Ensure you have selected the COM port and frame
+            // Ensure proper COM port and baud rate are selected
             if (COMPortList.SelectedItem != null && FrameSelector.SelectedIndex != -1 && BaudRateSelector.SelectedItem != null)
             {
                 string? selectedPort = COMPortList.SelectedItem?.ToString();
 
-                // Correct way to get selected baud rate from BaudRateSelector ComboBox
-                if (!string.IsNullOrEmpty(selectedPort) && int.TryParse((BaudRateSelector.SelectedItem as ComboBoxItem)?.Content?.ToString(), out int baudRate))
+                // Use a try-catch block for error handling
+                try
                 {
-                    int selectedFrame = FrameSelector.SelectedIndex;
-
-                    // Connect to the selected port and frame
-                    bool connected = await serialPortManager.ConnectAsync(selectedFrame, selectedPort, baudRate);
-
-                    if (connected)
+                    if (!string.IsNullOrEmpty(selectedPort) && int.TryParse((BaudRateSelector.SelectedItem as ComboBoxItem)?.Content?.ToString(), out int baudRate))
                     {
-                        // Remove the selected port from the ListBox once connected
-                        Dispatcher.InvokeAsync(() => COMPortList.Items.Remove(selectedPort));
+                        int selectedFrame = FrameSelector.SelectedIndex;
 
-                        // Register a handler to listen to the incoming data
-                        serialPortManager.RegisterDataReceivedHandler(selectedFrame, (s, args) =>
+                        // Perform the connection on a background thread
+                        bool connected = await Task.Run(() => serialPortManager.ConnectAsync(selectedFrame, selectedPort, baudRate));
+
+                        if (connected)
                         {
-                            var task = Task.Run(() =>
+                            Dispatcher.Invoke(() => COMPortList.Items.Remove(selectedPort));
+                            serialPortManager.RegisterDataReceivedHandler(selectedFrame, (s, args) =>
                             {
                                 string data = serialPortManager.ReadExisting(selectedFrame);
                                 string dataType = serialPortManager.IdentifyDataType(data);
-                                Dispatcher.InvokeAsync(() => DisplayData(selectedFrame, data, dataType, selectedPort));
+                                Dispatcher.Invoke(() => DisplayData(selectedFrame, data, dataType, selectedPort));
                             });
-                        });
-
-                        // Store the connected port in the dictionary
-                        _connectedPorts[selectedFrame] = selectedPort;
-
-                        MessageBox.Show($"Connected to {selectedPort}", "Connection Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Error connecting to {selectedPort}.", "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error connecting to the selected port.");
+                        }
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid baud rate selected.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(ex.Message, "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a COM port, frame, and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please select a valid COM port and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
 
         // In order to refresh the COM ports when disconnecting a serial connection
         private void RefreshCOMPorts()
@@ -247,31 +258,26 @@ namespace MO_TERMINAL
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
-            TabItem? selectedTab = FrameTabControl.SelectedItem as TabItem;
             int selectedFrame = FrameTabControl.SelectedIndex;
 
             if (serialPortManager.IsConnected(selectedFrame))
             {
-                serialPortManager.Disconnect(selectedFrame);
-                ClearFrameData(selectedFrame);
+                serialPortManager.Disconnect(selectedFrame);  // Disconnect serial port
+                ClearFrameData(selectedFrame);  // Clear UI for that frame
 
                 if (_connectedPorts.ContainsKey(selectedFrame))
                 {
-                    _connectedPorts.Remove(selectedFrame); // Remove the port from the dictionary
+                    _connectedPorts.Remove(selectedFrame);
                 }
 
-                if (selectedTab != null)
-                {
-                    string portName = selectedTab.Header.ToString().Split('-').Last().Trim();
-                    selectedTab.Header = $"Frame {selectedFrame + 1}";
-                    MessageBox.Show($"Disconnected from {portName}", "Disconnection Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
+                MessageBox.Show("Successfully disconnected.");
             }
             else
             {
-                MessageBox.Show("No connection to close.", "Disconnection Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("No active connection to disconnect.");
             }
-            RefreshCOMPorts();
+
+            RefreshCOMPorts();  // Update available ports
         }
 
         private void TurnOnButton_Click(object sender, RoutedEventArgs e)
@@ -400,6 +406,12 @@ namespace MO_TERMINAL
 
         protected override void OnClosed(EventArgs e)
         {
+            // Ensure all ports are properly closed when the window is closed
+            foreach (var port in _connectedPorts.Keys.ToList())
+            {
+                serialPortManager.Disconnect(port);
+            }
+
             _toggleSwitchHandler?.DisposeResources();
             base.OnClosed(e);
         }
@@ -445,5 +457,59 @@ namespace MO_TERMINAL
                 MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+
+
+        private void FreezeTraceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button freezeButton = sender as Button;
+
+            // Toggle the trace freeze state
+            if (isTraceFrozen)
+            {
+                // Unfreeze trace: allow automatic scrolling
+                EnableAutoScroll();
+                freezeButton.Content = "Freeze Trace"; // Change button text back
+            }
+            else
+            {
+                // Freeze trace: stop automatic scrolling
+                DisableAutoScroll();
+                freezeButton.Content = "Unfreeze Trace"; // Change button text to Unfreeze
+            }
+
+            // Toggle the frozen state
+            isTraceFrozen = !isTraceFrozen;
+        }
+
+
+        private void DisableAutoScroll()
+        {
+            // No additional code needed here as we manage scroll in ScrollToBottom
+        }
+
+        private void EnableAutoScroll()
+        {
+            // Ensure ScrollToBottom is called when auto-scroll is enabled
+            ScrollToBottom(GetSelectedScrollViewer());
+        }
+
+
+
+        private ScrollViewer GetSelectedScrollViewer()
+        {
+            switch (FrameTabControl.SelectedIndex)
+            {
+                case 0: return Frame1ScrollViewer;
+                case 1: return Frame2ScrollViewer;
+                case 2: return Frame3ScrollViewer;
+                case 3: return Frame4ScrollViewer;
+                default: return null;
+            }
+        }
+
+
+
+
     }
 }

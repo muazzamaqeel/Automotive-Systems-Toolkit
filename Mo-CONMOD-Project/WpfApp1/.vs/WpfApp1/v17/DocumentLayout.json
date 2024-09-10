@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\components\\tracingwindow\\toggleswitchhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:components\\tracingwindow\\toggleswitchhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\wpfapp1\\serialportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,6 +43,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ToggleSwitchHandler.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Components\\TracingWindow\\ToggleSwitchHandler.cs",
+              "RelativeDocumentMoniker": "Components\\TracingWindow\\ToggleSwitchHandler.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Components\\TracingWindow\\ToggleSwitchHandler.cs",
+              "RelativeToolTip": "Components\\TracingWindow\\ToggleSwitchHandler.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAYwJsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T10:31:59.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-10T10:31:29.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Dashboard.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\Dashboard.xaml.cs",
+              "RelativeToolTip": "Views\\Dashboard.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T10:31:25.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "Views\\Dashboard.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\Dashboard.xaml",
+              "RelativeToolTip": "Views\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-10T10:31:23.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TracingWindow_MainWindow.xaml",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
@@ -38,13 +104,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "SerialPortManager.cs",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\SerialPortManager.cs",
               "RelativeDocumentMoniker": "SerialPortManager.cs",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\SerialPortManager.cs",
               "RelativeToolTip": "SerialPortManager.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAUwIAAAAAAAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAswMIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T07:55:39.555Z",
               "EditorCaption": ""
@@ -57,7 +123,7 @@
               "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
-              "ViewState": "AQIAAKQBAAAAAAAAAAAiwMEBAAAAAAAA",
+              "ViewState": "AQIAAMwBAAAAAAAAAAAYwAMCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T07:43:01.747Z",
               "EditorCaption": ""
