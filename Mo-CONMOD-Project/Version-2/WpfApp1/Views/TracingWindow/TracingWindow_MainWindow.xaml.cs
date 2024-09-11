@@ -242,29 +242,27 @@ namespace MO_TERMINAL
         {
             if (COMPortList.SelectedItem != null && FrameSelector.SelectedIndex != -1 && BaudRateSelector.SelectedItem != null)
             {
-                string selectedPort = COMPortList.SelectedItem?.ToString(); // Get the selected port
-                int selectedFrame = FrameSelector.SelectedIndex; // Get the selected frame
+                string selectedPort = COMPortList.SelectedItem?.ToString();
+                int selectedFrame = FrameSelector.SelectedIndex;
 
                 try
                 {
-                    // Check if the selected port and baud rate are valid
+                    // Validate selected port and baud rate
                     if (!string.IsNullOrEmpty(selectedPort) && int.TryParse((BaudRateSelector.SelectedItem as ComboBoxItem)?.Content?.ToString(), out int baudRate))
                     {
-                        // Set the frame's auto-detection flag to true
                         isFrameAutoDetectionRunning[selectedFrame] = true;
 
-                        // Attempt to connect asynchronously to the selected port with the selected baud rate
+                        // Attempt connection
                         bool connected = await Task.Run(() => serialPortManager.ConnectAsync(selectedFrame, selectedPort, baudRate));
 
                         if (connected)
                         {
-                            // Remove the connected port from the list of available ports and store it in the _connectedPorts dictionary
                             Dispatcher.Invoke(() =>
                             {
                                 COMPortList.Items.Remove(selectedPort);
-                                _connectedPorts[selectedFrame] = selectedPort; // Store the connected port for the frame
+                                _connectedPorts[selectedFrame] = selectedPort;  // Ensure correct port is stored for this frame
 
-                                // Update the tab header for the selected frame to show the connected port
+                                // Update the tab header to show connected COM port
                                 var frameTabItem = FrameTabControl.Items[selectedFrame] as TabItem;
                                 if (frameTabItem != null)
                                 {
@@ -272,33 +270,29 @@ namespace MO_TERMINAL
                                 }
                             });
 
-                            // Register the data received handler for the connected frame
                             serialPortManager.RegisterDataReceivedHandler(selectedFrame, DataReceivedHandlerForFrame(selectedFrame));
                         }
                         else
                         {
-                            // Show an error message if the connection failed
                             MessageBox.Show("Error connecting to the selected port.");
                         }
                     }
                     else
                     {
-                        // Show a warning if no valid port or baud rate is selected
                         MessageBox.Show("Please select a valid COM port and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Handle and display any exceptions that occur during the connection process
                     MessageBox.Show(ex.Message, "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                // Show a warning if no COM port or frame is selected
                 MessageBox.Show("Please select a valid COM port and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
 
 
 
@@ -511,21 +505,31 @@ namespace MO_TERMINAL
         {
             int selectedFrame = FrameTabControl.SelectedIndex;
 
-            // Ensure a valid frame is selected
             if (selectedFrame >= 0 && selectedFrame < 4)
             {
-                // Check if the frame has a connected port
+                // Check if the selected frame has a connected port
                 if (_connectedPorts.ContainsKey(selectedFrame))
                 {
                     string portName = _connectedPorts[selectedFrame];
                     string command = "3CBPwd?";  // Password command
 
-                    // Check if the selected frame's port is connected before sending data
-                    if (_serialPortFacade.IsPortConnected(selectedFrame))
+                    // Ensure the port is connected before sending data
+                    if (serialPortManager.IsConnected(selectedFrame))
                     {
-                        // Send the password command to the serial port
-                        _serialPortFacade.SendData(selectedFrame, command);
-                        MessageBox.Show($"Password command sent to Frame {selectedFrame + 1} on {portName}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        // Simulate entering the password command into the respective frame's input field
+                        TextBox frameInputTextBox = GetFrameInputTextBox(selectedFrame);
+                        if (frameInputTextBox != null)
+                        {
+                            frameInputTextBox.Text = command;
+
+                            // Simulate pressing 'Enter' to send the command
+                            FrameInput_KeyDown(frameInputTextBox, new KeyEventArgs(Keyboard.PrimaryDevice, PresentationSource.FromVisual(this), 0, Key.Enter)
+                            {
+                                RoutedEvent = Keyboard.KeyDownEvent
+                            }, selectedFrame);
+
+                            MessageBox.Show($"Password command sent to Frame {selectedFrame + 1} on {portName}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
                     }
                     else
                     {
@@ -542,6 +546,28 @@ namespace MO_TERMINAL
                 MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+
+
+        private TextBox GetFrameInputTextBox(int frameIndex)
+        {
+            switch (frameIndex)
+            {
+                case 0:
+                    return Frame1Input;
+                case 1:
+                    return Frame2Input;
+                case 2:
+                    return Frame3Input;
+                case 3:
+                    return Frame4Input;
+                default:
+                    return null;
+            }
+        }
+
+
+
 
 
 
