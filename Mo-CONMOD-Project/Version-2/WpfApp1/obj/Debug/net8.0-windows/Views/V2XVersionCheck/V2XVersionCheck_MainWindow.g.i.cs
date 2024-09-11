@@ -92,8 +92,7 @@ namespace WpfApp1.Views.V2XVersionCheck {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp1;V1.0.0.0;component/views/v2xversioncheck/v2xversioncheck_mainwindow.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp1;component/views/v2xversioncheck/v2xversioncheck_mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\V2XVersionCheck\V2XVersionCheck_MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

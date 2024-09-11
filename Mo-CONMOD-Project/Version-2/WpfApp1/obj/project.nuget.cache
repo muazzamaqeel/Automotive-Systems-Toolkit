@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a/Hc4khuskE=",
+  "dgSpecHash": "SOf6SWTI+TM=",
   "success": true,
-  "projectFilePath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MAqeel\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.0.5\\hardcodet.notifyicon.wpf.1.0.5.nupkg.sha512",
     "C:\\Users\\MAqeel\\.nuget\\packages\\hardcodet.wpf.taskbarnotification\\1.0.5\\hardcodet.wpf.taskbarnotification.1.0.5.nupkg.sha512",

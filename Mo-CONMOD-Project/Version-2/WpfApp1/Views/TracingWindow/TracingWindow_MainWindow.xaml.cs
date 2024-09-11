@@ -28,6 +28,9 @@ namespace MO_TERMINAL
         {
             InitializeComponent();
 
+            // Initialize the serial port facade
+            _serialPortFacade = new SerialPortFacade();
+
             if (toggleSwitch != null)
             {
                 _toggleSwitchHandler = new ToggleSwitchHandler(toggleSwitch);
@@ -42,9 +45,10 @@ namespace MO_TERMINAL
             this.StateChanged += MainWindow_StateChanged;
 
             LoadCOMPorts();
-            StartAutoDetection();
+            StartAutoDetection();  // Start auto-detection for available COM ports at startup
             switchControl = new ClewareSwitchControl();
         }
+
 
         private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
         {
@@ -78,7 +82,7 @@ namespace MO_TERMINAL
 
         private void StartAutoDetection()
         {
-            int maxFrames = 4;
+            int maxFrames = 4; // Assuming 4 frames are used in your application
 
             for (int i = 0; i < maxFrames; i++)
             {
@@ -88,7 +92,7 @@ namespace MO_TERMINAL
                     if (!string.IsNullOrEmpty(port))
                     {
                         int selectedFrame = i;
-                        int baudRate = 115200;
+                        int baudRate = 115200; // Default baud rate for connection
 
                         Task.Run(async () =>
                         {
@@ -97,7 +101,12 @@ namespace MO_TERMINAL
                             bool connected = await serialPortManager.ConnectAsync(selectedFrame, port, baudRate);
                             if (connected)
                             {
-                                Dispatcher.Invoke(() => COMPortList.Items.Remove(port));
+                                Dispatcher.Invoke(() =>
+                                {
+                                    COMPortList.Items.Remove(port);
+                                    _connectedPorts[selectedFrame] = port;  // Assign connected port to the frame
+                                });
+
                                 serialPortManager.RegisterDataReceivedHandler(selectedFrame, DataReceivedHandlerForFrame(selectedFrame));
                             }
                         });
@@ -105,6 +114,7 @@ namespace MO_TERMINAL
                 }
             }
         }
+
 
         private SerialDataReceivedEventHandler DataReceivedHandlerForFrame(int frameIndex)
         {
@@ -130,6 +140,7 @@ namespace MO_TERMINAL
             ScrollViewer frameScrollViewer = null;
             TabItem frameTabItem = null;
 
+            // Map the correct UI elements based on the frame index
             switch (frameIndex)
             {
                 case 0:
@@ -154,43 +165,72 @@ namespace MO_TERMINAL
                     break;
             }
 
+            // Perform UI updates in a non-blocking manner
             if (frameDataTextBox != null)
             {
                 Dispatcher.Invoke(() =>
                 {
+                    // Append data to the TextBox
                     frameDataTextBox.AppendText(data);
 
+                    // Automatically scroll to the bottom of the frame's ScrollViewer if not frozen
                     if (!isTraceFrozen && frameScrollViewer != null)
                     {
                         ScrollToBottom(frameScrollViewer);
                     }
 
-                    if (!string.IsNullOrEmpty(data) && frameTabItem != null)
+                    // Update the tab header based on the content in the data (WUC, NAD, V2X)
+                    if (frameTabItem != null && !string.IsNullOrEmpty(data))
                     {
+                        string currentHeader = frameTabItem.Header.ToString();
+
+                        // Only update the header if it has changed to avoid flickering
                         if (data.Contains("W01") || data.Contains("WUC"))
                         {
-                            frameTabItem.Header = $"WUC - {portName}";
+                            string newHeader = $"WUC - {portName}";
+                            if (!currentHeader.Equals(newHeader))
+                            {
+                                frameTabItem.Header = newHeader;
+                            }
                         }
                         else if (data.Contains("ECALL_STATE") || data.Contains("NAD") || data.Contains("Enter HSM BL") || data.Contains("Set JTAG Done"))
                         {
-                            frameTabItem.Header = $"NAD - {portName}";
+                            string newHeader = $"NAD - {portName}";
+                            if (!currentHeader.Equals(newHeader))
+                            {
+                                frameTabItem.Header = newHeader;
+                            }
                         }
                         else if (data.Contains("V2X") || data.Contains("SEQ_A_OK."))
                         {
-                            frameTabItem.Header = $"V2X - {portName}";
+                            string newHeader = $"V2X - {portName}";
+                            if (!currentHeader.Equals(newHeader))
+                            {
+                                frameTabItem.Header = newHeader;
+                            }
+                        }
+                        else if (!currentHeader.Contains(portName)) // Only update if the port name is not already in the header
+                        {
+                            frameTabItem.Header = $"Frame {frameIndex + 1} - {portName}";
                         }
                     }
                 });
             }
         }
 
+
+
+
+
+        // Helper method to scroll to the bottom of the frame when new data arrives
         private void ScrollToBottom(ScrollViewer scrollViewer)
         {
-            if (!isTraceFrozen)
+            if (scrollViewer != null && !isTraceFrozen)
             {
-                scrollViewer?.ScrollToEnd();
+                scrollViewer.ScrollToEnd(); // Trigger auto-scroll only when necessary
             }
         }
+
 
         private async void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
@@ -202,44 +242,66 @@ namespace MO_TERMINAL
         {
             if (COMPortList.SelectedItem != null && FrameSelector.SelectedIndex != -1 && BaudRateSelector.SelectedItem != null)
             {
-                string selectedPort = COMPortList.SelectedItem?.ToString();
+                string selectedPort = COMPortList.SelectedItem?.ToString(); // Get the selected port
+                int selectedFrame = FrameSelector.SelectedIndex; // Get the selected frame
 
                 try
                 {
+                    // Check if the selected port and baud rate are valid
                     if (!string.IsNullOrEmpty(selectedPort) && int.TryParse((BaudRateSelector.SelectedItem as ComboBoxItem)?.Content?.ToString(), out int baudRate))
                     {
-                        int selectedFrame = FrameSelector.SelectedIndex;
-
+                        // Set the frame's auto-detection flag to true
                         isFrameAutoDetectionRunning[selectedFrame] = true;
 
+                        // Attempt to connect asynchronously to the selected port with the selected baud rate
                         bool connected = await Task.Run(() => serialPortManager.ConnectAsync(selectedFrame, selectedPort, baudRate));
 
                         if (connected)
                         {
+                            // Remove the connected port from the list of available ports and store it in the _connectedPorts dictionary
                             Dispatcher.Invoke(() =>
                             {
                                 COMPortList.Items.Remove(selectedPort);
-                                _connectedPorts[selectedFrame] = selectedPort;
+                                _connectedPorts[selectedFrame] = selectedPort; // Store the connected port for the frame
+
+                                // Update the tab header for the selected frame to show the connected port
+                                var frameTabItem = FrameTabControl.Items[selectedFrame] as TabItem;
+                                if (frameTabItem != null)
+                                {
+                                    frameTabItem.Header = $"Frame {selectedFrame + 1} - {selectedPort}";
+                                }
                             });
 
+                            // Register the data received handler for the connected frame
                             serialPortManager.RegisterDataReceivedHandler(selectedFrame, DataReceivedHandlerForFrame(selectedFrame));
                         }
                         else
                         {
+                            // Show an error message if the connection failed
                             MessageBox.Show("Error connecting to the selected port.");
                         }
+                    }
+                    else
+                    {
+                        // Show a warning if no valid port or baud rate is selected
+                        MessageBox.Show("Please select a valid COM port and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 catch (Exception ex)
                 {
+                    // Handle and display any exceptions that occur during the connection process
                     MessageBox.Show(ex.Message, "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
+                // Show a warning if no COM port or frame is selected
                 MessageBox.Show("Please select a valid COM port and baud rate.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+
+
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
@@ -448,16 +510,40 @@ namespace MO_TERMINAL
         private void PasswordButton_Click(object sender, RoutedEventArgs e)
         {
             int selectedFrame = FrameTabControl.SelectedIndex;
+
+            // Ensure a valid frame is selected
             if (selectedFrame >= 0 && selectedFrame < 4)
             {
-                string command = "3CBPwd?";
-                // Use _serialPortFacade to send data to the selected frame
-                _serialPortFacade.SendData(selectedFrame, command);
+                // Check if the frame has a connected port
+                if (_connectedPorts.ContainsKey(selectedFrame))
+                {
+                    string portName = _connectedPorts[selectedFrame];
+                    string command = "3CBPwd?";  // Password command
+
+                    // Check if the selected frame's port is connected before sending data
+                    if (_serialPortFacade.IsPortConnected(selectedFrame))
+                    {
+                        // Send the password command to the serial port
+                        _serialPortFacade.SendData(selectedFrame, command);
+                        MessageBox.Show($"Password command sent to Frame {selectedFrame + 1} on {portName}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Frame {selectedFrame + 1} is not connected to any port.", "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No valid port is connected to the selected frame.", "Connection Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {
                 MessageBox.Show("No frame selected.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+
+
     }
 }
