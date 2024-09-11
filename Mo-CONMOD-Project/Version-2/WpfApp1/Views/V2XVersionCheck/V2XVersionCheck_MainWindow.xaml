@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp1.Views.V2XVersionCheck.V2XVersionCheck_MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#2C3E50"
+        FontFamily="Segoe UI" Foreground="White">
+    <Grid Margin="20">
+        <!-- WUC Checkbox -->
+        <CheckBox x:Name="WUCCheckBox" Content="WUC Reset Command Sent" 
+                  VerticalAlignment="Top" 
+                  HorizontalAlignment="Left" 
+                  Margin="0,0,0,0"
+                  FontSize="14"
+                  IsEnabled="False"
+                  Foreground="White"
+                  Background="#34495E"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar x:Name="ProgressBar" Height="20" VerticalAlignment="Top" Margin="0,35,0,0"
+                     Background="#34495E" Foreground="#1ABC9C" />
+
+        <!-- Check Version Button -->
+        <Button x:Name="CheckVersionButton" Content="Check Version" Width="150" Height="35" 
+                VerticalAlignment="Top" Margin="0,70,0,0" HorizontalAlignment="Left"
+                Background="#1ABC9C" Foreground="White" BorderThickness="0" 
+                FontSize="14" Cursor="Hand" Click="CheckVersionButton_Click"/>
+
+        <!-- Log TextBox -->
+        <TextBox x:Name="LogTextBox" 
+                 VerticalAlignment="Top" 
+                 Margin="0,120,250,0"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto" 
+                 Height="300"
+                 Background="#34495E"
+                 Foreground="White"
+                 BorderThickness="1"
+                 BorderBrush="#1ABC9C"
+                 Padding="10"/>
+
+        <!-- New TextBox for displaying command output -->
+        <TextBox x:Name="CommandOutputTextBox" 
+                 VerticalAlignment="Top" 
+                 HorizontalAlignment="Right" 
+                 Width="250" 
+                 Height="300" 
+                 Margin="0,120,0,0"
+                 IsReadOnly="True" 
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto" 
+                 HorizontalScrollBarVisibility="Auto"
+                 Background="#34495E"
+                 Foreground="White"
+                 BorderThickness="1"
+                 BorderBrush="#1ABC9C"
+                 Padding="10"/>
+    </Grid>
+</Window>

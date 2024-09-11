@@ -1,0 +1,15 @@
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\WpfApp1.exe
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\WpfApp1.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\WpfApp1.deps.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\WpfApp1.runtimeconfig.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\WpfApp1.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\System.Drawing.Common.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\System.IO.Ports.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\unix\lib\net8.0\System.IO.Ports.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-CONMOD-Project\Binaries\runtimes\win\lib\net8.0\System.IO.Ports.dll
