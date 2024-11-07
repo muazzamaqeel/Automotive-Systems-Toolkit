@@ -35,7 +35,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MO_Cleware_SwitchApp",
+              "Title": "MO_Cleware_SwitchApp.csproj",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
               "RelativeDocumentMoniker": "MO_Cleware_SwitchApp.csproj",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
@@ -77,7 +77,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAAwLEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAIwLcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T08:22:16.909Z",
               "EditorCaption": ""
@@ -91,8 +91,7 @@
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-04T08:22:14.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T08:22:14.513Z"
             }
           ]
         }
