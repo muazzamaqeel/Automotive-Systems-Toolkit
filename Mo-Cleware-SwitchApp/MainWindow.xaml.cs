@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using System.Windows.Forms; // Added for NotifyIcon
-using System.Drawing; // Added for Icon
-using WpfApplication = System.Windows.Application; // Alias for System.Windows.Application
+using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
+using System.Threading;
+using WpfApplication = System.Windows.Application;
 
 namespace MO_Cleware_SwitchApp
 {
@@ -19,6 +20,9 @@ namespace MO_Cleware_SwitchApp
 
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern IntPtr GetLastError();
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
 
         [DllImport("USBaccessX64.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr FCWInitObject();
@@ -38,39 +42,44 @@ namespace MO_Cleware_SwitchApp
         [DllImport("USBaccessX64.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void FCWUnInitObject(IntPtr cw);
 
+        private const int WM_SETICON = 0x80;
         private IntPtr cwPointer;
         private int currentState = 0;
         private const int switchIndex = 0;
         private const int switchId = 0x10;
         private Mutex appMutex;
-
-        private NotifyIcon notifyIcon = new NotifyIcon();  // Initialized here
-
+        private NotifyIcon notifyIcon;
+        private System.Threading.Timer deviceCheckTimer; 
 
         public MainWindow()
         {
-            // Initialize the mutex
             appMutex = new Mutex(true, "MO_Cleware_SwitchApp", out bool isNewInstance);
 
             if (!isNewInstance)
             {
                 System.Windows.MessageBox.Show("Another instance is already running.", "Instance Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                WpfApplication.Current.Shutdown(); // Exit the application
+                WpfApplication.Current.Shutdown();
                 return;
             }
 
             InitializeComponent();
-
-            // Initialize the NotifyIcon (System Tray Icon)
-            notifyIcon = new NotifyIcon();
-            notifyIcon.Icon = new Icon("icon.ico"); // Referencing the icon file by name
-            notifyIcon.Visible = true;
-            notifyIcon.DoubleClick += NotifyIcon_DoubleClick;
-            notifyIcon.Text = "MO-Cleware App";
-
+            InitializeNotifyIcon();
             this.StateChanged += MainWindow_StateChanged;
-
             InitializeCleware();
+
+            // Start the timer to check the device connection status every 2 seconds
+            deviceCheckTimer = new System.Threading.Timer(CheckDeviceConnection, null, 2000, 2000);
+        }
+
+        private void InitializeNotifyIcon()
+        {
+            notifyIcon = new NotifyIcon
+            {
+                Icon = new Icon(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "iconOff.ico")),
+                Visible = true,
+                Text = "MO-Cleware App"
+            };
+            notifyIcon.DoubleClick += NotifyIcon_DoubleClick;
         }
 
         private void InitializeCleware()
@@ -81,7 +90,7 @@ namespace MO_Cleware_SwitchApp
             if (devCnt <= 0)
             {
                 System.Windows.MessageBox.Show("No Cleware devices found. Please connect the device and try again.", "Device Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                WpfApplication.Current.Shutdown(); // Use alias for WPF Application
+                WpfApplication.Current.Shutdown();
                 return;
             }
 
@@ -89,11 +98,12 @@ namespace MO_Cleware_SwitchApp
             if (currentState == -1)
             {
                 System.Windows.MessageBox.Show("Failed to retrieve the current switch state.", "Switch Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                WpfApplication.Current.Shutdown(); // Use alias for WPF Application
+                WpfApplication.Current.Shutdown();
                 return;
             }
 
             toggleSwitch.IsChecked = currentState == 1;
+            UpdateTrayIcon();
         }
 
         private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
@@ -101,12 +111,12 @@ namespace MO_Cleware_SwitchApp
             int result = FCWSetSwitch(cwPointer, switchIndex, switchId, 1);
             if (result <= 0)
             {
-                System.Windows.MessageBox.Show("Failed to turn on the switch.", "Switch Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                toggleSwitch.IsChecked = false; // revert the state
+                toggleSwitch.IsChecked = false;
             }
             else
             {
                 currentState = 1;
+                UpdateTrayIcon();
             }
         }
 
@@ -115,23 +125,38 @@ namespace MO_Cleware_SwitchApp
             int result = FCWSetSwitch(cwPointer, switchIndex, switchId, 0);
             if (result <= 0)
             {
-                System.Windows.MessageBox.Show("Failed to turn off the switch.", "Switch Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                toggleSwitch.IsChecked = true; // revert the state
+                toggleSwitch.IsChecked = true;
             }
             else
             {
                 currentState = 0;
+                UpdateTrayIcon();
             }
+        }
+
+        private void UpdateTrayIcon()
+        {
+            string iconPath = currentState == 1
+                ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "icon.ico")
+                : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "iconOff.ico");
+
+            ChangeWindowIcon(iconPath);
+            notifyIcon.Icon = new Icon(iconPath);
+            notifyIcon.Visible = true;
+        }
+
+        private void ChangeWindowIcon(string iconPath)
+        {
+            IntPtr iconHandle = System.Drawing.Icon.ExtractAssociatedIcon(iconPath).Handle;
+            SendMessage(new System.Windows.Interop.WindowInteropHelper(this).Handle, WM_SETICON, (IntPtr)0, iconHandle);
+            SendMessage(new System.Windows.Interop.WindowInteropHelper(this).Handle, WM_SETICON, (IntPtr)1, iconHandle);
         }
 
         private void NotifyIcon_DoubleClick(object? sender, EventArgs e)
         {
-            if (sender != null)
-            {
-                this.Show();
-                this.WindowState = WindowState.Normal;
-                notifyIcon.Visible = false;
-            }
+            this.Show();
+            this.WindowState = WindowState.Normal;
+            notifyIcon.Visible = false;
         }
 
         private void MainWindow_StateChanged(object? sender, EventArgs e)
@@ -143,9 +168,24 @@ namespace MO_Cleware_SwitchApp
             }
         }
 
+        private void CheckDeviceConnection(object state)
+        {
+            // Check if the device is still connected
+            if (cwPointer == IntPtr.Zero || FCWGetSwitch(cwPointer, switchIndex, switchId) == -1)
+            {
+                deviceCheckTimer?.Dispose(); // Stop the timer
+                WpfApplication.Current.Dispatcher.Invoke(() =>
+                {
+                    System.Windows.MessageBox.Show("You disconnected the device.", "Device Disconnected", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    WpfApplication.Current.Shutdown(); // Close the application
+                });
+            }
+        }
+
         protected override void OnClosed(EventArgs e)
         {
-            notifyIcon.Dispose();
+            notifyIcon?.Dispose();
+            deviceCheckTimer?.Dispose();
             if (cwPointer != IntPtr.Zero)
             {
                 FCWCloseCleware(cwPointer);

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\mo_cleware_switchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:mo_cleware_switchapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:icon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-cleware-switchapp\\iconoff.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{8291A530-FD1E-40BF-9DC3-68360C10A57F}|MO_Cleware_SwitchApp.csproj|solutionrelative:iconoff.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +30,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 214,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MO_Cleware_SwitchApp",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
+              "RelativeDocumentMoniker": "MO_Cleware_SwitchApp.csproj",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MO_Cleware_SwitchApp.csproj",
+              "RelativeToolTip": "MO_Cleware_SwitchApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-07T10:29:44.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "icon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\icon.ico",
+              "RelativeDocumentMoniker": "icon.ico",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\icon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "RelativeToolTip": "icon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2024-11-07T09:53:52.486Z",
+              "EditorCaption": " -  [English (United States)] - Icon [16x16, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "iconOff.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\iconOff.ico",
+              "RelativeDocumentMoniker": "iconOff.ico",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\iconOff.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "RelativeToolTip": "iconOff.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2024-11-07T09:53:46.976Z",
+              "EditorCaption": " -  [English (United States)] - Icon [16x16, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAAAJ8AAAAAAAAA",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAwLEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T08:22:16.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-Cleware-SwitchApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",

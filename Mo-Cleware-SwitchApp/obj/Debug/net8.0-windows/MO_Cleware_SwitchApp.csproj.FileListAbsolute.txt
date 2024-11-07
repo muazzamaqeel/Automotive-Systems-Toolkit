@@ -25,3 +25,32 @@ C:\Programming\Outside Repo\MO_Cleware_SwitchApp\obj\Debug\net8.0-windows\MO_Cle
 C:\Programming\Outside Repo\MO_Cleware_SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp_Content.g.cs
 C:\Programming\Outside Repo\MO_Cleware_SwitchApp\bin\Debug\net8.0-windows\Hardcodet.NotifyIcon.Wpf.dll
 C:\Programming\Outside Repo\MO_Cleware_SwitchApp\bin\Debug\net8.0-windows\icon.ico
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\icon.ico
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\MO_Cleware_SwitchApp.exe
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\MO_Cleware_SwitchApp.deps.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\MO_Cleware_SwitchApp.runtimeconfig.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\MO_Cleware_SwitchApp.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\MO_Cleware_SwitchApp.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\Hardcodet.NotifyIcon.Wpf.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\System.Reactive.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\System.Reactive.Windows.Forms.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.csproj.AssemblyReference.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp_Content.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp_MarkupCompile.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.g.resources
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.AssemblyInfoInputs.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.AssemblyInfo.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.csproj.CoreCompileInputs.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.sourcelink.json
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Clewa.A3638992.Up2Date
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\refint\MO_Cleware_SwitchApp.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\MO_Cleware_SwitchApp.genruntimeconfig.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\obj\Debug\net8.0-windows\ref\MO_Cleware_SwitchApp.dll
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-Cleware-SwitchApp\bin\Debug\net8.0-windows\iconOff.ico

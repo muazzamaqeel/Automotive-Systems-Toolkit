@@ -1,12 +1,119 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\views\\tracingwindow\\serialportfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\serialportfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\tracingwindow\\tracingwindow_mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|c:\\git-hub\\automotive-systems-toolkit\\mo-conmod-project\\version-2\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBB93E2-5464-4799-8BF0-9819306CAC07}|WpfApp1.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-11T14:12:43.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Dashboard.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\Dashboard.xaml.cs",
+              "RelativeToolTip": "Views\\Dashboard.xaml.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwB0AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:12:38.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "Views\\Dashboard.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\Dashboard.xaml",
+              "RelativeToolTip": "Views\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-11T14:12:33.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TracingWindow_MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml.cs",
+              "ViewState": "AQIAALoCAAAAAAAAAAAiwMkCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:12:25.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TracingWindow_MainWindow.xaml",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "RelativeToolTip": "Views\\TracingWindow\\TracingWindow_MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-11T14:12:16.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SerialPortFacade.cs",
+              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\SerialPortFacade.cs",
+              "RelativeDocumentMoniker": "Views\\TracingWindow\\SerialPortFacade.cs",
+              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\Mo-CONMOD-Project\\Version-2\\WpfApp1\\Views\\TracingWindow\\SerialPortFacade.cs",
+              "RelativeToolTip": "Views\\TracingWindow\\SerialPortFacade.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwD8AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T14:12:09.495Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

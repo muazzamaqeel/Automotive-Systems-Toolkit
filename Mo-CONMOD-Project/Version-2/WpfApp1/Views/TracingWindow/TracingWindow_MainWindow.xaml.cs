@@ -9,6 +9,8 @@ using System.Windows.Input;
 using WpfApp1.Components.TracingWindow;
 using WpfApp1;
 using WpfApp1.Views.TracingWindow;
+using System.Text;
+using System.Timers;
 
 namespace MO_TERMINAL
 {
@@ -22,6 +24,10 @@ namespace MO_TERMINAL
 
         private bool[] isFrameAutoDetectionRunning = new bool[4] { true, true, true, true }; // Control auto-detection per frame
         private SerialPortFacade _serialPortFacade;
+
+        private StringBuilder[] frameBuffers = new StringBuilder[4]; // Assuming 4 frames
+        private System.Timers.Timer updateUITimer;
+
 
 
         public TracingWindow()
@@ -47,6 +53,104 @@ namespace MO_TERMINAL
             LoadCOMPorts();
             StartAutoDetection();  // Start auto-detection for available COM ports at startup
             switchControl = new ClewareSwitchControl();
+
+
+
+            // Initialize buffers for each frame
+            for (int i = 0; i < frameBuffers.Length; i++)
+            {
+                frameBuffers[i] = new StringBuilder();
+            }
+
+            // Set up a timer to periodically update the UI with buffered data
+            updateUITimer = new System.Timers.Timer(500); // Update every 500ms
+            updateUITimer.Elapsed += UpdateUI;
+            updateUITimer.Start();
+        }
+
+
+        private void UpdateUI(object sender, ElapsedEventArgs e)
+        {
+            for (int frameIndex = 0; frameIndex < frameBuffers.Length; frameIndex++)
+            {
+                // If there's data in the buffer, update the UI
+                if (frameBuffers[frameIndex].Length > 0)
+                {
+                    string data = frameBuffers[frameIndex].ToString();
+                    frameBuffers[frameIndex].Clear();
+
+                    Dispatcher.Invoke(() =>
+                    {
+                        AppendToTextBox(frameIndex, data);
+                    });
+                }
+            }
+        }
+
+        private void AppendToTextBox(int frameIndex, string data)
+        {
+            TextBox frameTextBox = GetFrameTextBox(frameIndex);
+            ScrollViewer frameScrollViewer = GetFrameScrollViewer(frameIndex);
+
+            if (frameTextBox != null)
+            {
+                // Append the buffered data to the TextBox
+                frameTextBox.AppendText(data);
+
+                // Scroll to the bottom unless the trace is frozen
+                if (!isTraceFrozen && frameScrollViewer != null)
+                {
+                    frameScrollViewer.ScrollToEnd();
+                }
+
+                // Limit the number of lines in the TextBox
+                LimitTextBoxSize(frameTextBox, 500); // For example, keep only 500 lines
+            }
+        }
+
+        private TextBox GetFrameTextBox(int frameIndex)
+        {
+            switch (frameIndex)
+            {
+                case 0: return Frame1Data;
+                case 1: return Frame2Data;
+                case 2: return Frame3Data;
+                case 3: return Frame4Data;
+                default: return null;
+            }
+        }
+
+        private ScrollViewer GetFrameScrollViewer(int frameIndex)
+        {
+            switch (frameIndex)
+            {
+                case 0: return Frame1ScrollViewer;
+                case 1: return Frame2ScrollViewer;
+                case 2: return Frame3ScrollViewer;
+                case 3: return Frame4ScrollViewer;
+                default: return null;
+            }
+        }
+
+        private void LimitTextBoxSize(TextBox textBox, int maxLines)
+        {
+            if (textBox.LineCount > maxLines)
+            {
+                // Remove the first few lines if the limit is exceeded
+                int removeLines = textBox.LineCount - maxLines;
+                textBox.Text = string.Join(Environment.NewLine, textBox.Text
+                    .Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+                    .Skip(removeLines));
+            }
+        }
+
+        private void DataReceivedHandlerForFrame(int frameIndex, string data)
+        {
+            // Append the received data to the appropriate buffer
+            lock (frameBuffers[frameIndex])
+            {
+                frameBuffers[frameIndex].Append(data);
+            }
         }
 
 
@@ -568,6 +672,94 @@ namespace MO_TERMINAL
 
 
 
+        private string frameBuffer = string.Empty;
+
+        private void UpdateUI(string data, int frameIndex)
+        {
+            // Select the correct TextBox based on frame index
+            TextBox frameTextBox = null;
+
+            switch (frameIndex)
+            {
+                case 0:
+                    frameTextBox = Frame1Data;
+                    break;
+                case 1:
+                    frameTextBox = Frame2Data;
+                    break;
+                case 2:
+                    frameTextBox = Frame3Data;
+                    break;
+                case 3:
+                    frameTextBox = Frame4Data;
+                    break;
+            }
+
+            // Ensure frameTextBox is not null
+            if (frameTextBox != null)
+            {
+                frameBuffer += data;
+                if (frameBuffer.Length > 1000) // Arbitrary size for buffer
+                {
+                    Dispatcher.Invoke(() => {
+                        frameTextBox.AppendText(frameBuffer);
+                        frameBuffer = string.Empty;
+                    });
+                }
+            }
+        }
+
+
+
+
+
+
+        private StringBuilder traceBuffer = new StringBuilder();
+        private readonly object lockObj = new object();
+        private const int MaxBufferSize = 1000; // Arbitrary buffer limit
+
+        private void AppendTraceData(string data, int frameIndex)
+        {
+            lock (lockObj)
+            {
+                traceBuffer.Append(data);
+                if (traceBuffer.Length >= MaxBufferSize)
+                {
+                    TextBox frameTextBox = null;
+                    ScrollViewer frameScrollViewer = null;
+
+                    switch (frameIndex)
+                    {
+                        case 0:
+                            frameTextBox = Frame1Data;
+                            frameScrollViewer = Frame1ScrollViewer;
+                            break;
+                        case 1:
+                            frameTextBox = Frame2Data;
+                            frameScrollViewer = Frame2ScrollViewer;
+                            break;
+                        case 2:
+                            frameTextBox = Frame3Data;
+                            frameScrollViewer = Frame3ScrollViewer;
+                            break;
+                        case 3:
+                            frameTextBox = Frame4Data;
+                            frameScrollViewer = Frame4ScrollViewer;
+                            break;
+                    }
+
+                    if (frameTextBox != null)
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            frameTextBox.AppendText(traceBuffer.ToString());
+                            traceBuffer.Clear();
+                            frameScrollViewer?.ScrollToEnd(); // Scroll if necessary
+                        });
+                    }
+                }
+            }
+        }
 
 
 
