@@ -1,5 +1,6 @@
 C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\MO_Cleware_SwitchApp.exe
 C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\icon.ico
+C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\iconOff.ico
 C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\MO_Cleware_SwitchApp.dll
 C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\MO_Cleware_SwitchApp.deps.json
 C:\Programming\Publish Softwares\MO_Cleware_SwitchApp-Publish\MO_Cleware_SwitchApp.runtimeconfig.json

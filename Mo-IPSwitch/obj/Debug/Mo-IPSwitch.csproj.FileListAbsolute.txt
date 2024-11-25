@@ -1,0 +1,15 @@
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\bin\Debug\Mo-IPSwitch.exe.config
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\bin\Debug\Mo-IPSwitch.exe
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\bin\Debug\Mo-IPSwitch.pdb
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.csproj.AssemblyReference.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\MainWindow.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\App.g.cs
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch_MarkupCompile.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch_MarkupCompile.lref
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\MainWindow.baml
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.g.resources
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo_IPSwitch.Properties.Resources.resources
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.csproj.GenerateResource.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.csproj.CoreCompileInputs.cache
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.exe
+C:\Git-Hub\Automotive-Systems-Toolkit\Mo-IPSwitch\obj\Debug\Mo-IPSwitch.pdb

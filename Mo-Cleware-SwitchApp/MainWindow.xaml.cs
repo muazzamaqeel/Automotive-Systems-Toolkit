@@ -62,6 +62,14 @@ namespace MO_Cleware_SwitchApp
                 return;
             }
 
+
+            // Display the embedded resource names
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            string[] resourceNames = assembly.GetManifestResourceNames();
+            string resources = string.Join("\n", resourceNames);
+            System.Windows.MessageBox.Show(resources, "Embedded Resources");
+
+
             InitializeComponent();
             InitializeNotifyIcon();
             this.StateChanged += MainWindow_StateChanged;
@@ -136,21 +144,44 @@ namespace MO_Cleware_SwitchApp
 
         private void UpdateTrayIcon()
         {
-            string iconPath = currentState == 1
-                ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "icon.ico")
-                : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "iconOff.ico");
+            string resourceName = currentState == 1
+                ? "MO_Cleware_SwitchApp.icon.ico"
+                : "MO_Cleware_SwitchApp.iconOff.ico";
 
-            ChangeWindowIcon(iconPath);
-            notifyIcon.Icon = new Icon(iconPath);
+            Icon icon = GetIconFromResource(resourceName);
+            ChangeWindowIcon(icon);
+            notifyIcon.Icon = icon;
             notifyIcon.Visible = true;
         }
 
-        private void ChangeWindowIcon(string iconPath)
+
+        private void ChangeWindowIcon(Icon icon)
         {
-            IntPtr iconHandle = System.Drawing.Icon.ExtractAssociatedIcon(iconPath).Handle;
-            SendMessage(new System.Windows.Interop.WindowInteropHelper(this).Handle, WM_SETICON, (IntPtr)0, iconHandle);
-            SendMessage(new System.Windows.Interop.WindowInteropHelper(this).Handle, WM_SETICON, (IntPtr)1, iconHandle);
+            IntPtr iconHandle = icon.Handle;
+            IntPtr hWnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
+            SendMessage(hWnd, WM_SETICON, (IntPtr)0, iconHandle); // Small icon
+            SendMessage(hWnd, WM_SETICON, (IntPtr)1, iconHandle); // Large icon
         }
+
+
+        private Icon GetIconFromResource(string resourceName)
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream != null)
+                {
+                    return new Icon(stream);
+                }
+                else
+                {
+                    throw new Exception("Resource not found: " + resourceName);
+                }
+            }
+        }
+
+
+
 
         private void NotifyIcon_DoubleClick(object? sender, EventArgs e)
         {

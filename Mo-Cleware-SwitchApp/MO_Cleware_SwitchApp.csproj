@@ -6,20 +6,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
-
+	
   <ItemGroup>
-    <None Remove="iconOff.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="icon.ico">
+    <EmbeddedResource Include="icon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iconOff.ico">
+    </EmbeddedResource>
+    <EmbeddedResource Include="iconOff.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

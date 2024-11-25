@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MO_Cleware_SwitchApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fff1f90490a1afb81cd29669cbeadbc3b4e124f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MO_Cleware_SwitchApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MO_Cleware_SwitchApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
