@@ -9,3 +9,14 @@ C:\Git-Hub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.exe.ma
 C:\Git-Hub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.application
 C:\Git-Hub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.exe.manifest
 C:\Git-Hub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.application
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.csproj.AssemblyReference.cache
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.csproj.CoreCompileInputs.cache
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.exe
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.pdb
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.exe.config
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.exe.manifest
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.application
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.exe
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\bin\Debug\ConsoleIPapp.pdb
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.exe.manifest
+C:\Repositories\GitHub\Automotive-Systems-Toolkit\ConsoleIPapp\obj\Debug\ConsoleIPapp.application

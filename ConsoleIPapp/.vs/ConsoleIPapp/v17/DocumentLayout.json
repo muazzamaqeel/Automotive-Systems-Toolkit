@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\",
+  "WorkspaceRootPath": "C:\\Repositories\\GitHub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D71CF07-606C-43C8-AD90-2316A79D455D}|ConsoleIPapp.csproj|c:\\git-hub\\automotive-systems-toolkit\\consoleipapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D71CF07-606C-43C8-AD90-2316A79D455D}|ConsoleIPapp.csproj|c:\\repositories\\github\\automotive-systems-toolkit\\consoleipapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D71CF07-606C-43C8-AD90-2316A79D455D}|ConsoleIPapp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\Program.cs",
+              "DocumentMoniker": "C:\\Repositories\\GitHub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Git-Hub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\Program.cs",
+              "ToolTip": "C:\\Repositories\\GitHub\\Automotive-Systems-Toolkit\\ConsoleIPapp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAqwNEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwBAAAAAAAAAAAkwEABAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T11:54:38.486Z",
               "EditorCaption": ""
